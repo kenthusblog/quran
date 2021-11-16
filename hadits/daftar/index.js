@@ -77,7 +77,7 @@ function changeURLParam(elem) {
    const rangeAwal = elem.getAttribute('data-num') * 20 - 19
    const rangeAkhir = (elem.getAttribute('data-num') * 20) > jumlahHadits ? jumlahHadits : (elem.getAttribute('data-num') * 20)
 
-   document.location.href = `http://islamic-bit.netlify.app/hadits/daftar/?id=${idPerawi}&jumlah=${jumlahHadits}&page=${elem.getAttribute('data-num')}&range=${rangeAwal}-${rangeAkhir}`
+   document.location.href = `http://kenthus.netlify.app/hadits/daftar/?id=${idPerawi}&jumlah=${jumlahHadits}&page=${elem.getAttribute('data-num')}&range=${rangeAwal}-${rangeAkhir}`
 }
 
 // Set library pagination.js untuk membuat pagination
