@@ -15,7 +15,7 @@ window.onload = function () {
          let fragmentDaftarAyat = '';
 
          $('.nama-surat').text(namaSurat);
-         $('title').text(`Moco Qur'an - Surah ${namaSurat}`)
+         $('title').text(`Islamic Bit - Surah ${namaSurat}`)
 
          dataAyat.forEach(ayat => {
             const audio = ayat.audio.primary
@@ -86,8 +86,8 @@ window.onload = function () {
 
          // Last-read labels
          const lastReadLabels = document.querySelectorAll('.ayat .last-read');
-         if (JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir && JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir.nomerSurat == nomerSurat) {
-            const bacaanAyatTerakhir = JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir.nomerAyat;
+         if (JSON.parse(localStorage.getItem('ISLAMIC BIT')).bacaanTerakhir && JSON.parse(localStorage.getItem('ISLAMIC BIT')).bacaanTerakhir.nomerSurat == nomerSurat) {
+            const bacaanAyatTerakhir = JSON.parse(localStorage.getItem('ISLAMIC BIT')).bacaanTerakhir.nomerAyat;
             lastReadLabels[bacaanAyatTerakhir].classList.add('fas')
             lastReadLabels[bacaanAyatTerakhir].classList.remove('far')
 
@@ -117,7 +117,7 @@ window.onload = function () {
                   this.classList.remove('fas')
                   this.classList.add('far')
 
-                  const islamicBit = JSON.parse(localStorage.getItem('Moco Quran'))
+                  const islamicBit = JSON.parse(localStorage.getItem('ISLAMIC BIT'))
                   delete islamicBit.bacaanTerakhir
 
                   setToLocalStorage(islamicBit)
