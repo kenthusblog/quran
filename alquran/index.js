@@ -73,8 +73,8 @@ $.ajax({
       })
 
       // Memberi id pada surat yang terkahir dibaca
-      if (JSON.parse(localStorage.getItem('ISLAMIC BIT')).bacaanTerakhir) {
-         const bacaanSuratTerakhir = JSON.parse(localStorage.getItem('ISLAMIC BIT')).bacaanTerakhir.nomerSurat
+      if (JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir) {
+         const bacaanSuratTerakhir = JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir.nomerSurat
          console.log(bacaanSuratTerakhir)
          document.querySelectorAll('.surat')[bacaanSuratTerakhir - 1].setAttribute('id', 'last-read')
       }
