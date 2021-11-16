@@ -15,7 +15,7 @@ window.onload = function () {
          let fragmentDaftarAyat = '';
 
          $('.nama-surat').text(namaSurat);
-         $('title').text(`Islamic Bit - Surah ${namaSurat}`)
+         $('title').text(`Moco Qur'an - Surah ${namaSurat}`)
 
          dataAyat.forEach(ayat => {
             const audio = ayat.audio.primary
