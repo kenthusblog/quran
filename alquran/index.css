@@ -84,7 +84,16 @@ a {
    font-size: 1.4rem;
 }
 
-
+.sosmed-share {
+      width: 75%;
+      margin: 0 auto;
+   }
+.share .container {
+      width: 80%;
+   }
+.share .container {
+      width: 60%;
+   }
 
 
 
