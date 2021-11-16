@@ -39,8 +39,8 @@ $('.tanggal .hijriyah').text(`${hijriyahDate} ${hijriyahMonth} ${hijriyahYear} H
 let lokasiDefault = JSON.parse(localStorage.getItem('kota-pilihan'));
 if (!lokasiDefault) {
    lokasiDefault = {
-      name: 'Jakarta',
-      id: 1301
+      name: 'KAB. TRENGGALEK',
+      id: 1627
    }
 }
 $('.kota-pilihan').html(lokasiDefault.name);
