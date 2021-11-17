@@ -50,10 +50,7 @@
             <span style="letter-spacing: 3px; font-size: 1.5rem; font-weight: 500;">Moco Qur'an</span>
             <img src="../img/muslim.png" style="width: 20px;">
          </a>
-         <div style="letter-spacing: .1rem;">
-         <h4 class="nama-surat m-0" style="font-weight: 600; color: #fff;" id="jam"></h4>
-      </div>
-
+         
          <div class="index-surat" style="display: flex; align-items: center;">
             <span href="#last-read" class="fas fa-bookmark" style="font-size: 1.8rem; color: var(--white);"></span>
             <form class="cari-surat d-flex fuzzy-search ms-4 w-100">
@@ -101,25 +98,4 @@
 <script src="../list.js"></script>
 <script src="index.js"></script>
 
-<!-- JAM -->
-<script type="text/javascript">
-  window.onload = function() { jam(); }
- 
-  function jam() {
-   var e = document.getElementById('jam'),
-   d = new Date(), h, m, s;
-   h = d.getHours();
-   m = set(d.getMinutes());
-   s = set(d.getSeconds());
- 
-   e.innerHTML ='🕐' + h +':'+ m +':'+ s;
- 
-   setTimeout('jam()', 1000);
-  }
- 
-  function set(e) {
-   e = e < 10 ? '0'+ e : e;
-   return e;
-  }
-</script>   
 </html>
