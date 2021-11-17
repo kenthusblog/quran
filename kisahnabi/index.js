@@ -14,7 +14,7 @@ $.ajax({
                   <p class="highlight">
                      ${nabi.description.replace(/\n\n/gi, '<br>')}
                   </p>
-                  <span style="text-decoration: underline; font-size: .8rem">Lihat lebih banyak</span>
+                  <span style="text-decoration: underline; font-size: .9rem">Lihat Selengkapnya..</span>
                </div>
             </a>
          `;
