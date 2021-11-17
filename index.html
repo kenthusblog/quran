@@ -390,7 +390,24 @@
   <footer class="py-4" style="background-color: var(--blue1); display: flex; flex-wrap: wrap; justify-content: center; align-items:
       center; color: var(--white);">
     <div>
-      <h6 class="m-0 px-4 text-center"><a href="https://www.facebook.com/agus.aka.gaara" style="color: var(--yellow);">Kenthus</a> <br>
+      
+      <span class='text' style='font-size: 0.8em'><i>
+          <div id="load-time">Page Load Time...</div></center>
+<script type="text/javascript">
+var showTime = document.getElementById('load-time'),
+    startTime = (new Date()).getTime(); // Get the time before `window.onload`
+
+window.onload = function() {
+    // Get the current time in `window.onload`
+    var endTime = (new Date()).getTime();
+    // Now use the `startTime` and `endTime` to calculate the seconds
+    // And show the result inside `#load-time`
+    showTime.innerHTML = "Page loads : " + ((endTime-startTime)/1000) + " sec(s).";
+};
+        </script>  </i></span>
+      
+      
+      <h6 class="m-0 px-4 text-center"><a href="/about" style="color: var(--yellow);">Kenthus</a> <br>
         Made with &#10084; in JaTim, ID <br><span class="text" style="font-size: 0.7em"><i>© 2021 Moco Qur'an.</i></span>
       </h6>
     </div>
