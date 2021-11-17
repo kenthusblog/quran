@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://kenthus.netlify.app/</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/alquran/</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/asmaulhusna/</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/doaharian/</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/hadits/</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/kisahnabi/</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/tahlil/</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/sholawat/</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/bacaansholat/</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/about</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/hadits/daftar/?id=abu-daud&amp;jumlah=4419&amp;page=1&amp;range=1-20</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/hadits/daftar/?id=ahmad&amp;jumlah=4305&amp;page=1&amp;range=1-20</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/hadits/daftar/?id=bukhari&amp;jumlah=6638&amp;page=1&amp;range=1-20</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/hadits/daftar/?id=darimi&amp;jumlah=2949&amp;page=1&amp;range=1-20</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/hadits/daftar/?id=ibnu-majah&amp;jumlah=4285&amp;page=1&amp;range=1-20</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/hadits/daftar/?id=malik&amp;jumlah=1587&amp;page=1&amp;range=1-20</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/hadits/daftar/?id=muslim&amp;jumlah=4930&amp;page=1&amp;range=1-20</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/hadits/daftar/?id=nasai&amp;jumlah=5364&amp;page=1&amp;range=1-20</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kenthus.netlify.app/hadits/daftar/?id=tirmidzi&amp;jumlah=3625&amp;page=1&amp;range=1-20</loc>
+  <lastmod>2021-11-17T10:07:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
