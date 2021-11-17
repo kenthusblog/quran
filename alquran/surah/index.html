@@ -56,9 +56,9 @@
   <meta content='en_US' property='og:locale' />
   <meta content='en_GB' property='og:locale:alternate' />
   <meta content='id_ID' property='og:locale:alternate' />
-  <link itemprop="thumbnailUrl" href="img/islamic-bit.jpg">
+  <link itemprop="thumbnailUrl" href="../img/islamic-bit.jpg">
   <span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject"></span>
-  <link itemprop="url" href="/img/islamic-bit.jpg">
+  <link itemprop="url" href="../img/islamic-bit.jpg">
 
 
   <!-- Twitter -->
@@ -67,7 +67,7 @@
   <meta property="twitter:title" content="Penuhi Kebutuhan Islamimu Disini">
   <meta property="twitter:description"
     content="Dengan App Moco Qur'an, kamu dapat membaca Al-Quran secara online. Beberapa fitur menarik yang lain diantaranya, jadwal sholat seluruh daerah di Indonesia, membaca kisah Nabi dan Rasul, membaca Asmaul Husna, membaca Hadits-Hadits Rasulullah, membaca Doa-Doa Harian, membaca bacaan Sholat dan Tahlil, mendapatkan pencerahan dari ayat-ayat Al-Quran, serta mendapatkan quotes islami setiap saat. Islamic Bit dapat digunakan oleh seluruh orang, mulai dari masyarakat umum, guru dan siswa, traveler atau turis,  serta para pengusaha dan pekerja.">
-  <meta property="twitter:image" content="/img/islamic-bit.jpg">
+  <meta property="twitter:image" content="../img/islamic-bit.jpg">
    
    
    
@@ -152,4 +152,26 @@
    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 <script src="index.js"></script>
 
+<!-- JAM -->
+<script type="text/javascript">
+  window.onload = function() { jam(); }
+ 
+  function jam() {
+   var e = document.getElementById('jam'),
+   d = new Date(), h, m, s;
+   h = d.getHours();
+   m = set(d.getMinutes());
+   s = set(d.getSeconds());
+ 
+   e.innerHTML ='🕐' + h +':'+ m +':'+ s;
+ 
+   setTimeout('jam()', 1000);
+  }
+ 
+  function set(e) {
+   e = e < 10 ? '0'+ e : e;
+   return e;
+  }
+</script>   
+   
 </html>
