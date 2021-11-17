@@ -6,7 +6,7 @@ $.ajax({
       dataBacaanTahlil.forEach(bacaan => {
          fragmentBacaanTahlil += `
             <div class="bacaan p-4">
-               <h5 class="nama-bacaan mb-3" style="font-weight: 500;"><b>${bacaan.title}</b></h5>
+               <h5 class="nama-bacaan mb-3" style="font-weight: 500;"><strong>${bacaan.title}</strong></h5>
                <h2 class="mb-3" style="text-align: right;">${bacaan.arabic}</h2>
                <div class="info-bacaan mb-3 mb-sm-0" style="overflow: hidden;">
                   <div class="info mt-0" style="letter-spacing: 1px;">
