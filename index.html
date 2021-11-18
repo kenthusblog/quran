@@ -79,6 +79,7 @@
     crossorigin="anonymous" />
   <link rel="stylesheet" href="/index.css">
   
+    <link rel="stylesheet" href="dark-mode.css">
   
 </head>
 
@@ -92,25 +93,7 @@
         <span style="letter-spacing: 3px; font-size: 1.5rem; font-weight: 500; color: var(--yellow);">Moco Qur'an</span>
         <img src="/img/muslim.webp" alt="Logo" style="width: 50px;">
       </a>
-      
-            
-      <div class="theme-switch-wrapper">
-    <label class="theme-switch" for="checkbox">
-        <input type="checkbox" id="checkbox" />
-        <div class="slider round"></div>
-  </label></div>
-     
-     
-    
-   
-            
-      
-      
-      
-      
-      
-      
-      <div style="letter-spacing: .1rem;">
+    <div style="letter-spacing: .1rem;">
          <h4 class="nama-surat m-0" style="font-weight: 600; color: #fff;" id="jam"></h4>
       </div>
     </div>
@@ -118,12 +101,12 @@
   <!-- End Navbar -->
 
   <!-- Header -->
-  <header class="header py-5" style="height: 80vh; max-height: 700px; display: flex;
+  <header class="header py-5" style="color: var(--white); background-color: var(--blue1); height: 80vh; max-height: 700px; display: flex;
       align-items: center; position: relative;">
     <div class="container mx-auto px-4 px-sm-0 text-center">
       <div class="text-header">
         <h1 class="mx-auto mb-3">
-          Lebih Seru dan Mudah Dengan <span style="color: var(--yellow); background-color: var(--bg-color); font-weight: 700;">Moco Qur'an</span>
+          Lebih Seru dan Mudah Dengan <span style="color: var(--yellow); background-color: var(--blue1); font-weight: 700;">Moco Qur'an</span>
         </h1>
         <h5 class="mx-auto mb-5" style="letter-spacing: 1px;">
           <p class="my-2">Penuhi Kebutuhan Islamimu Setiap Hari Disini.</p>
@@ -479,38 +462,5 @@ Swal.fire({
   }
 </script>
 
-  
-  
-  <script>
-    window.console = window.console || function(t) {};
-if (document.location.search.match(/type=embed/gi)) {
-  window.parent.postMessage("resize", "*");
-}
-console.log('Ka.');
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark'); //add this
-    }
-    else {
-        document.documentElement.setAttribute('data-theme', 'light');
-    }    
-}
-toggleSwitch.addEventListener('change', switchTheme, false);
-
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-    }
-}
-  </script>
-  
-  
-  
 
 </html>
