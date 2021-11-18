@@ -12,8 +12,6 @@ body {
    background-color: var(--white);
 }
 
-
-
 a {
    text-decoration: none;
 }
@@ -35,7 +33,7 @@ button {
    position: absolute;
    width: 90%;
    max-width: 650px;
-   background-color: var(--bg-color);
+   background-color: var(--white);
    bottom: 0;
    left: 50%;
    right: 50%;
@@ -116,6 +114,25 @@ button {
 .sosmed:active {
    opacity: .7;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -237,5 +254,3 @@ button {
       width: 62px;
    }
 }
-
-
