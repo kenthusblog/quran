@@ -247,14 +247,12 @@ Swal.fire({
     $('#theme_toggle').addClass('btn-light');
     $('body').addClass('dark-theme');
     $('.card').addClass('dark-theme');
-    $('h1').html("Dark Mode");
     document.getElementById("theme_toggle").checked = true;
   } else {
     $('#theme_toggle').addClass('btn-dark');
     $('#theme_toggle').removeClass('btn-light');
     $('body').removeClass('dark-theme');
     $('.card').removeClass('dark-theme');
-    $('h1').html("Light Mode");
     document.getElementById("theme_toggle").checked = false;
   };
 });
