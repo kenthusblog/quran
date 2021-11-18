@@ -10,9 +10,8 @@
 body {
    font-family: 'Montserrat', sans-serif;
    overflow-x: hidden;
-   background-color: var(--white);
    background-color: var(--bg-color);
-	color: var(--font-color);	
+   color: var(--font-color);	
 }
 
 
