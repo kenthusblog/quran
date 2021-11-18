@@ -114,26 +114,16 @@
   <!-- End Header -->
 
   
-  <div class="container d-flex h-100 justify-content-center">
-  <div class="row align-self-center w-100">
-    <div class="col col-lg-7 mx-auto">
-      <div class="card border-0 shadow-sm">
-        <div class="card-body text-center">
-         <p class="lead">
-            <button role="button" class="btn btn-block btn-lg btn-dark" id="theme_toggle">Toggle</button>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-  
-  <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="theme_toggle">
+  <div class="nav-link">
+
+          <div class="form-check form-switch">
+            <input type="checkbox" class="form-check-input" id="darkSwitch">
             <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
-          </div>  
-  
-  
+          </div>
+          <script src="dark-mode-switch.min.js"></script>
+
+        </div>
+      </nav>
   
   
   
@@ -166,6 +156,8 @@
 <script src="hijri-date.js"></script>
 <script src="calendar.js"></script>
 <script src="index.js"></script>
+
+
 
 <!-- <script>
   let timerInterval
