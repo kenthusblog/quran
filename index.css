@@ -1,5 +1,9 @@
 :root {
-   
+   --yellow: #FFD500;
+   --blue1: #003F88;
+   --blue2: #00296B;
+   --white: #F7F7F7;
+   font-size: 12px;
     --primary-color: #302AE6;
     --secondary-color: #536390;
     --font-color: #424242;
@@ -37,7 +41,7 @@ button {
    position: absolute;
    width: 90%;
    max-width: 650px;
-   background-color: var(--white);
+   background-color: var(--bg-color);
    bottom: 0;
    left: 50%;
    right: 50%;
