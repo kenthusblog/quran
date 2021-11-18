@@ -119,41 +119,26 @@
   <!-- End Header -->
 
   
-  <span id="jam">10 </span>
-	<div id="ucapan">  </div>
-	<button onclick="salam()">Salam</button>
-	<button onclick="acak()">Ganti Jam</button>
-	<script type="text/javascript">
-		// jam adalah variabel global
-		var jam = document.getElementById("jam").innerHTML;
-		var ucapan;
-
-		function salam() {
-			if (jam > 6 && jam < 11) {
-				ucapan = "selamat pagi";
-			} else if (jam >= 12 && jam <= 15) {
-				ucapan = "selamat siang";
-			} else if (jam >= 16 && jam <= 18) {
-				ucapan = "selamat sore";
-			} else if (jam >= 19 && jam <= 24) {
-				ucapan = "selamat malam";
-			} else {
-				ucapan = "jam rusak";
-			}
-			document.getElementById("ucapan").innerHTML = ucapan;
-
-			// contoh adalah variabel lokal
-			var contoh = 5;
-			console.log(contoh);
-		}
-
-		function acak() {
-			jam = Math.floor(Math.random() * 24); 
-			document.getElementById("jam").innerHTML = jam;
-			salam();
-		}	
-	</script>
   
+  <script>
+var Digital=new Date()
+var hours=Digital.getHours()
+
+//Silahkan sesuaikan dengan pesan yang Anda inginkan
+if (hours>=5&&hours<=11) //pesan pagi hari (05.00-11.00)
+document.write('<b>Selamat Pagi Sob! Terima Kasih Pagi-Pagi Sudah Berkunjung</b>')
+else if (hours==12) //pesan siang hari (12.00-13.00)
+document.write('<b>Selamat Siang dan Selamat Makan Siang! Terima Kasih atas Kunjungannya</b>')
+else if (hours>=13&&hours<=17) //pesan sore hari(14.00-17.00)
+document.write('<b>Selamat Sore Sobat! Terima Kasih Sudah Berkunjung ya.</b>')
+else if (hours>=18&&hours<=20) //pesan petang hari (18.oo-20.00)
+document.write('<b>Selamat Petang dan Selamat Bersantai-santai! Terima Kasih Sudah Berkunjung</b>')
+else if (hours>=21&&hours<=11) //pesan malam hari (21.00-23.00)
+document.write('<b>Selamat Malam! Terima Kasih Sudah Berkunjung</b>')
+else //pesan malam mejelang pagi(00.00-04.00)
+document.write('<b>Terima Kasih Sudah Sudah Berkunjung pada Malam hari ini!</b>')
+//
+</script>
  
   
   <!-- Main Menu -->
