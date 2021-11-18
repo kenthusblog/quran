@@ -140,6 +140,10 @@
  <div class="bg-image d-flex justify-content-center align-items-center"
   style="background-image: url('https://rauljimenez.es/wp-content/404.jpg'); height: 100vh;">
 </div>
+
+<div onclick="setDarkMode(true)" id="darkBtn" class="">  <span>Dark</span></div>
+    <div onclick="setDarkMode(false)" id="lightBtn" class="is-hidden"> <span>Light</span> </div>
+
             
    <!-- Footer -->
   <footer class="py-4" style="background-color: var(--blue1); display: flex; flex-wrap: wrap; justify-content: center; align-items:
@@ -214,5 +218,22 @@ Swal.fire({
   }
 </script>
 
+
+<script>
+ function setDarkMode(isDark) {
+        var darkBtn = document.getElementById('darkBtn')
+        var lightBtn = document.getElementById('lightBtn')
+
+        if(isDark) {
+            lightBtn.style.display = "block"
+            darkBtn.style.display = "none"
+        } else {
+            lightBtn.style.display = "none"
+            darkBtn.style.display = "block"
+        }
+
+        document.body.classList.toggle("darkmode");
+    }
+</script>
 
 </html>
