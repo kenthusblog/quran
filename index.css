@@ -121,25 +121,6 @@ button {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Responsive Breakpoints */
 @media (min-width: 576px) {
    .header .text-header h1 {
@@ -253,4 +234,23 @@ button {
    .jadwal-icon {
       width: 62px;
    }
+}
+
+
+* {
+  transition: background-color 1s;
+}
+
+body {
+  height: 100vh;
+  background-color: #d4d4d4;
+}
+
+body.dark-theme {
+  background-color: #202945;
+}
+
+.card.dark-theme {
+  background-color: #374368;
+  color: #d4d4d4;
 }
