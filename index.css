@@ -259,11 +259,7 @@ button {
 body {
 	background-color: var(--bg-color);
 	color: var(--font-color);
-	margin-top: 1.5em;
-	margin-left: 2em;
-	max-width: 40em;
-	font-family: monospace;
-	line-height: 1.5;
+	
 }
 [data-theme="dark"] {
     --primary-color: #9A97F3;
