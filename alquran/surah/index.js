@@ -30,6 +30,10 @@ window.onload = function () {
                   <div class="mb-0 py-2 me-3">
                      <h3 class="nomer-ayat text-center" style="font-style: italic;">${nomer}.</h3>
                      <span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;"></span>
+                     
+                     <button class="last-read">Title Only</button>
+                     
+                     
                   </div>
                   <div class="detail-ayat mb-2 w-100">
                      <div class="bacaan-ayat mb-3">
