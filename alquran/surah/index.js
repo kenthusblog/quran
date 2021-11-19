@@ -233,3 +233,10 @@ function setToLocalStorage(value) {
 //       }
 //    })
 // }
+
+
+
+
+document.querySelector(".last-read").addEventListener('click', function(){
+  Swal.fire("Our First Alert");
+});
