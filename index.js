@@ -212,7 +212,7 @@ $.ajax({
         <h6 class="text-start" style="font-style: italic; font-weight: 400;">${quotesRandom.arti}</h6>
       `
 
-      $('.widget-header').html(fragmentQuotes)
+      $('.quotes').html(fragmentQuotes)
 
       // Menentukan tinggi header dan margin-bottom
       // Hal ini dilakukan karena beberapa quotes memiliki kalimat yang panjang, sehingga nantinya akan overlaping
