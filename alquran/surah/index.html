@@ -90,12 +90,7 @@
 
 <body>
 
-   
-  <div class="progress-container">
-    <div class="progress-bar" id="myBar"></div>
-  </div>
-</div>
-   
+  
    
    <!-- Navbar -->
    <nav class="navbar navbar-dark fixed-top py-3" style="color: var(--white); background-color: var(--blue1);">
@@ -125,6 +120,31 @@
    </nav>
    <!-- End Navbar -->
 
+   
+ 
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+</div>
+   
+   <script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+   
+   
+   
+   
+   
+   
+   
    <!-- Ayat -->
    <section class="daftar-ayat py-4">
       <div class="container mx-auto">
