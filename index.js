@@ -200,32 +200,6 @@ $.ajax({
 
 
 
-/ Render random quotes islami COPY
-$.ajax({
-   url: 'quotes.json',
-   success: results => {
-      const getRandom = Math.floor(Math.random() * results.length)
-      const quotesRandom = results[getRandom]
-      const fragmentQuotes = `
-        <h6 class="text-start">Quotes Islami Untukmu:</h6>
-        <h2 class="text-end my-3">${quotesRandom.arabic}</h2>
-        <h6 class="text-start" style="font-style: italic; font-weight: 400;">${quotesRandom.arti}</h6>
-      `
-
-      $('.quotes').html(fragmentQuotes)
-
-      // Menentukan tinggi header dan margin-bottom
-      // Hal ini dilakukan karena beberapa quotes memiliki kalimat yang panjang, sehingga nantinya akan overlaping
-      const widgetHeight = getComputedStyle(document.querySelector('.quotes')).height
-      document.querySelector('.header').style.height = `calc(80vh + ${widgetHeight} / 2)`
-      document.querySelector('.header').style.marginBottom = `calc(${widgetHeight} / 4 + 30px)`
-   }
-})
-
-
-
-
-
 
 
 
