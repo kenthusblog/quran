@@ -29,10 +29,10 @@ window.onload = function () {
                <div class="ayat p-3 p-sm-4">
                   <div class="mb-0 py-2 me-3">
                      <h3 class="nomer-ayat text-center" style="font-style: italic;">${nomer}.</h3>
-                     <span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer; id=myPopup;"></span>
+                     <span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;"></span>
                      
                      <div class="popup" onclick="myFunction()">
-  <span class="popuptext" id="myPopup">A Simple Popup!</span>
+  <span class="last-read far fa-bookmark" id="myPopup">A Simple Popup!</span>
 </div>
                      
                      
