@@ -86,8 +86,8 @@ window.onload = function () {
 
          // Last-read labels
          const lastReadLabels = document.querySelectorAll('.ayat .last-read');
-         if (JSON.parse(localStorage.getItem('ISLAMIC BIT')).bacaanTerakhir && JSON.parse(localStorage.getItem('ISLAMIC BIT')).bacaanTerakhir.nomerSurat == nomerSurat) {
-            const bacaanAyatTerakhir = JSON.parse(localStorage.getItem('ISLAMIC BIT')).bacaanTerakhir.nomerAyat;
+         if (JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir && JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir.nomerSurat == nomerSurat) {
+            const bacaanAyatTerakhir = JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir.nomerAyat;
             lastReadLabels[bacaanAyatTerakhir].classList.add('fas')
             lastReadLabels[bacaanAyatTerakhir].classList.remove('far')
 
@@ -117,7 +117,7 @@ window.onload = function () {
                   this.classList.remove('fas')
                   this.classList.add('far')
 
-                  const islamicBit = JSON.parse(localStorage.getItem('ISLAMIC BIT'))
+                  const islamicBit = JSON.parse(localStorage.getItem('Moco Quran'))
                   delete islamicBit.bacaanTerakhir
 
                   setToLocalStorage(islamicBit)
@@ -192,12 +192,12 @@ function autoPlay(index) {
 }
 
 // Mendapatakn surat dan ayat yang terkahir dibaca
-if (!localStorage.getItem('ISLAMIC BIT')) {
-   localStorage.setItem('ISLAMIC BIT', JSON.stringify({}))
+if (!localStorage.getItem('Moco Quran')) {
+   localStorage.setItem('Moco Quran', JSON.stringify({}))
 }
 
 function setBacaanTerakhir(nomerSurat, nomerAyat) {
-   const islamicBit = JSON.parse(localStorage.getItem('ISLAMIC BIT'))
+   const islamicBit = JSON.parse(localStorage.getItem('Moco Quran'))
    islamicBit.bacaanTerakhir = {
       nomerSurat: nomerSurat,
       nomerAyat: nomerAyat
@@ -206,7 +206,7 @@ function setBacaanTerakhir(nomerSurat, nomerAyat) {
 }
 
 function setToLocalStorage(value) {
-   localStorage.setItem('ISLAMIC BIT', JSON.stringify(value))
+   localStorage.setItem('Moco Quran', JSON.stringify(value))
 }
 
 
