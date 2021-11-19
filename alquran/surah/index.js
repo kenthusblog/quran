@@ -30,7 +30,7 @@ window.onload = function () {
                   <div class="mb-0 py-2 me-3">
                      <h3 class="nomer-ayat text-center" style="font-style: italic;">${nomer}.</h3>
                      <span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;"></span>
-                       </div>
+                  </div>
                   <div class="detail-ayat mb-2 w-100">
                      <div class="bacaan-ayat mb-3">
                         <audio controls>
@@ -54,7 +54,6 @@ window.onload = function () {
                         </div>
                      </div>
                   </div>
-
                   <span class="expand-detail">
                      <img src="../../img/arrow-down.png">
                   </span>
@@ -100,8 +99,7 @@ window.onload = function () {
 
          // Toggle label last-read saat di click
          for (let i = 0; i < lastReadLabels.length; i++) {
-            lastReadLabels[i].addEventListener('click', function () 
-                                                     {
+            lastReadLabels[i].addEventListener('click', function () {
                if (lastReadLabels[i].classList.contains('far')) {
                   this.classList.remove('far')
                   this.classList.add('fas')
@@ -233,15 +231,3 @@ function setToLocalStorage(value) {
 //       }
 //    })
 // }
-
-
-
-window.onscroll = function() {myFunction()};
-
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-} 
-
