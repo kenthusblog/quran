@@ -31,9 +31,20 @@ window.onload = function () {
                      <h3 class="nomer-ayat text-center" style="font-style: italic;">${nomer}.</h3>
                      <span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;"></span>
                      
-                     <div class="popup" onclick="myFunction()">
-  <span class="last-read far fa-bookmark" id="myPopup">A Simple Popup!</span>
+                     
+                     
+                     
+                <div class="popup" onclick="myFunction()"><span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;"></span>
+  <span class="popuptext" id="myPopup">A Simple Popup!</span>
 </div>
+
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>     
                      
                      
                      
