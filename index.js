@@ -202,7 +202,7 @@ $.ajax({
 
 / Render random quotes islami COPY
 $.ajax({
-   url: 'quotes-islami.json',
+   url: 'quotes.json',
    success: results => {
       const getRandom = Math.floor(Math.random() * results.length)
       const quotesRandom = results[getRandom]
