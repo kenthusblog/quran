@@ -461,7 +461,26 @@
 <script src="calendar.js"></script>
 <script src="index.js"></script>
 <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5e77b55bb8637000145ecc3c&product=inline-share-buttons" async="async"></script>
-<!-- <script>
+
+<script>
+        var menu = document.getElementById("navigasi")
+        var sesuai = document.getElementById("head")
+        function showmenu(){
+            if(menu.style.display != "block"){
+                menu.style.display = "block"
+                sesuai.style.paddingTop = "0em"                
+            } else {
+                menu.style.display = "none"
+                sesuai.style.paddingTop = "0em"
+            }
+        }
+        
+    </script>       
+       
+       
+       
+       
+       <!-- <script>
   let timerInterval
 Swal.fire({
   title: 'Perhatian!',
