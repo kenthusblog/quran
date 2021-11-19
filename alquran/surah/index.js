@@ -34,8 +34,8 @@ window.onload = function () {
                      
                      
                      
-                <div class="popup" onclick="myFunction()"><span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;"></span>
-  <span class="popuptext" id="myPopup">A Simple Popup!</span>
+                <div class="popup" onclick="myFunction()" class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;">
+  <span class="popuptext" id="myPopup">A Simple Popup!</span></span>
 </div>
 
 <script>
