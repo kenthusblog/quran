@@ -101,10 +101,7 @@ window.onload = function () {
          // Toggle label last-read saat di click
          for (let i = 0; i < lastReadLabels.length; i++) {
             lastReadLabels[i].addEventListener('click', function () 
-                                               {
-  Swal.fire("Our First Alert");
-}
-                                               {
+                                                     {
                if (lastReadLabels[i].classList.contains('far')) {
                   this.classList.remove('far')
                   this.classList.add('fas')
