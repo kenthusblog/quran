@@ -1,14 +1,23 @@
+:root {
+   --yellow: #FFD500;
+   --blue1: #003F88;
+   --blue2: #00296B;
+   --white: #F7F7F7;
+}
+
+
+
 *{
     padding: 0;
     margin: 0;
 }
 @font-face{
     font-family: 'Roboto';
-    src: url('fonts/Roboto/Roboto-Regular.ttf');
+    src: url('/assets/fonts/Roboto/Roboto-Regular.ttf');
 }
 body{
     background-color: #f8f9fa;
-    font-family: 'Roboto';
+    font-family: 'Roboto', 'Montserrat', sans-serif;;
     transition: all 0.3s;
 }
 nav{
