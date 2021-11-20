@@ -6,9 +6,10 @@
    font-size: 12px;
 }
 
-body {
-   font-family: 'Montserrat', sans-serif;
-   background-color: var(--white);
+body{
+    background-color: #f8f9fa;
+    font-family: 'Roboto';
+    transition: all 0.3s;
 }
 
 a {
@@ -990,29 +991,6 @@ body.darkBody{
 
 
 
-
-:root {
-   --yellow: #FFD500;
-   --blue1: #003F88;
-   --blue2: #00296B;
-   --white: #F7F7F7;
-   --white2: #F0F8FF;
-   font-size: 12px;
-}
-
-body {
-   font-family: 'Montserrat', sans-serif;
-   overflow-x: hidden;
-}
-
-a {
-   text-decoration: none;
-}
-
-button {
-   border: none;
-   outline: none;
-}
 
 .header .text-header h1 {
    font-size: 2.5rem;
