@@ -19,12 +19,12 @@
     <nav>
         <div class="navbar-brand">
             <a href="/">Moco Quran</a>
-    <div style="letter-spacing: .1rem;"><h4 class="nama-surat m-0" style="font-weight: 600; color: #fff;" id="jam"></h4></div>                   
             <button id="button">
                 <span></span>
                 <!-- <span class="span-b"></span> -->
             </button>
-        </div>
+       <div style="letter-spacing: .1rem;"><h4 class="nama-surat m-0" style="font-weight: 600; color: #fff;" id="jam"></h4></div>                   
+  </div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="/aquran">Al Qur'an</a></li>
@@ -397,7 +397,7 @@
    m = set(d.getMinutes());
    s = set(d.getSeconds());
  
-   e.innerHTML ='🕐' + h +':'+ m +':'+ s;
+   e.innerHTML ='' + h +':'+ m +':'+ s;
  
    setTimeout('jam()', 1000);
   }
