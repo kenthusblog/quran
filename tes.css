@@ -206,7 +206,6 @@ button {
     height: 100%;
     display: none;
     text-align: center;
-    padding: 120px 0 0;
     box-sizing: border-box;
     animation: modalAnimasi 0.5s ease;
     animation-fill-mode: forwards;
@@ -214,7 +213,7 @@ button {
 }
 .modalKu h1{
     color: black;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 
@@ -240,7 +239,6 @@ button {
 }
 .modal-isi p{
     color: rgb(39, 39, 39);
-    margin: 10px 0;
     font-size: 11pt;
     font-weight: 500;
 }
