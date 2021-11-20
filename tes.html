@@ -6,13 +6,12 @@
     <title>Moco Qur'an</title>
     <link rel="icon" href="assets/icons/logoutama.png">
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="/index.css">
 
 </head>
 <body>
     <nav>
         <div class="navbar-brand">
-            <a href="index.html">MocoQuran</a>
+            <a href="/">MocoQuran</a>
             <button id="button">
                 <span></span>
                 <!-- <span class="span-b"></span> -->
@@ -20,7 +19,7 @@
         </div>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="skills.html">Skill</a></li>
+            <li><a href="/Alquran">Skill</a></li>
             <li><a href="portofolio.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -58,86 +57,63 @@
                                                                                            
                                                                                            
    <!-- Main Menu -->
-  <section id="menu" class="main-menu py-5">
-    <div class="container mx-auto py-5">
-      <h2 class="mb-5" style="font-weight: 700; text-align: center; color: var(--blue2);">Pilih Kebutuhan Islamimu
-      </h2>
-      <div class="menu-wrapper row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-4 mx-auto justify-content-center">
-        <div class="col">
-          <a href="alquran/" style="display: block;">
-            <div class="px-3 py-4 text-center"
-              style="background-color: var(--blue1); color: var(--white); border-radius: 6px; cursor: pointer;">
-              <img src="img/quran.webp" class="img-fluid mb-3" style="width: 4rem;" alt="Al-Quran">
-              <h6 style="font-weight: 600;">Al-Quran</h6>
+  <div class="container">
+      <div class="portofolio">
+        <div class="portoflio-content">
+          <h1>Pilih Kebutuhan Islamimu</h1>
+          <div class="list-project">
+            <div class="isi-list-project">
+              <img
+                src="img/quran.webp"
+                alt="alquran"
+              />
+              <div class="caption-project">
+                <div class="line"></div>
+                <h2>Al Quran Online</h2>
+                <span>Lengkap dengan terjemahan dan tafsir</span>
+                <a href="/alquran">LIHAT</a>
+              </div>
             </div>
-          </a>
-        </div>
-        <div class="col">
-          <a href="asmaulhusna/" style="display: block;">
-            <div class="px-3 py-4 text-center"
-              style="background-color: var(--blue1); color: var(--white); border-radius: 6px; cursor: pointer;">
-              <img src="img/allah.webp" class="img-fluid mb-3" style="width: 4rem;" alt="Asmaul Husna">
-              <h6 style="font-weight: 600;">Asmaul Husna</h6>
+            <div class="isi-list-project">
+              <img
+                src="assets/img/portofolio/dekstop-app.svg"
+                alt="dekstop-app"
+              />
+              <div class="caption-project">
+                <div class="line"></div>
+                <h2>Aplikasi Dekstop</h2>
+                <span>C#</span>
+                <a href="#" onclick="openAplikasiDesktop()">Lihat</a>
+              </div>
             </div>
-          </a>
-        </div>
-        <div class="col">
-          <a href="doaharian/" style="display: block;">
-            <div class="px-3 py-4 text-center"
-              style="background-color: var(--blue1); color: var(--white); border-radius: 6px; cursor: pointer;">
-              <img src="img/praying.webp" class="img-fluid mb-3" style="width: 4rem;" alt="Doa Harian">
-              <h6 style="font-weight: 600;">Doa Harian</h6>
+            <div class="isi-list-project">
+              <img
+                src="assets/img/portofolio/web-developer.svg"
+                alt="web-developer"
+              />
+              <div class="caption-project">
+                <div class="line"></div>
+                <h2>Sistem Informasi</h2>
+                <span>PHP,CodeIgniter,Laravel</span>
+                <a href="#" onclick="openSistemInformasi()">Lihat</a>
+              </div>
             </div>
-          </a>
-        </div>
-        <div class="col">
-          <a href="hadits/" style="display: block;">
-            <div class="px-3 py-4 text-center"
-              style="background-color: var(--blue1); color: var(--white); border-radius: 6px; cursor: pointer;">
-              <img src="img/hadits.webp" class="img-fluid mb-3" style="width: 4rem;" alt="Hadits Rasul">
-              <h6 style="font-weight: 600;">Hadits Rasul</h6>
+            <div class="isi-list-project">
+              <img src="assets/img/img-android-dev.png" alt="img-android" />
+              <div class="caption-project">
+                <div class="line"></div>
+                <h2>Aplikasi Android</h2>
+                <span>React Native</span>
+                <a href="#" onclick="openAplikasiAndroid()">Lihat</a>
+              </div>
             </div>
-          </a>
+            <!-- <img src="assets/img/portofolio/web-portofolioo-1.png" alt="web-portofolio">
+                    <img src="assets/img/portofolio/web-media-pemebelajaran.png" alt="web-media-pemebelajaran"> -->
+          </div>
         </div>
-        <div class="col">
-          <a href="kisahnabi/" style="display: block;">
-            <div class="px-3 py-4 text-center"
-              style="background-color: var(--blue1); color: var(--white); border-radius: 6px; cursor: pointer;">
-              <img src="img/lighter.webp" class="img-fluid mb-3" style="width: 4rem;" alt="Kisah Nabi & Rasul">
-              <h6 style="font-weight: 600;">Kisah Nabi & Rasul</h6>
-            </div>
-          </a>
-        </div>
-        <div class="col">
-          <a href="tahlil/" style="display: block;">
-            <div class="px-3 py-4 text-center"
-              style="background-color: var(--blue1); color: var(--white); border-radius: 6px; cursor: pointer;">
-              <img src="img/tasbih.webp" class="img-fluid mb-3" style="width: 4rem;" alt="Bacaan Tahlil">
-              <h6 style="font-weight: 600;">Bacaan Tahlil</h6>
-            </div>
-          </a>
-        </div>
-        <div class="col">
-          <a href="sholawat/" style="display: block;">
-            <div class="px-3 py-4 text-center"
-              style="background-color: var(--blue1); color: var(--white); border-radius: 6px; cursor: pointer;">
-              <img src="img/muhammad.webp" class="img-fluid mb-3" style="width: 4rem;" alt="Sholawat Nabi">
-              <h6 style="font-weight: 600;">Sholawat Nabi</h6>
-            </div>
-          </a>
-        </div>
-        <div class="col">
-          <a href="bacaansholat/" style="display: block;">
-            <div class="px-3 py-4 text-center"
-              style="background-color: var(--blue1); color: var(--white); border-radius: 6px; cursor: pointer;">
-              <img src="img/prayer.webp" class="img-fluid mb-3" style="width: 4rem;" alt="Bacaan Sholat">
-              <h6 style="font-weight: 600;">Bacaan Sholat</h6>
-            </div>
-          </a>
-        </div>
+        <hr />
       </div>
     </div>
-  </section>
   <!-- End Main Menu --> 
                                                                                            
                                                                                            
