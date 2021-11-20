@@ -102,55 +102,6 @@ button {
    align-items: center;
 }
 
-.sosmed:active {
-   opacity: .7;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Responsive Breakpoints */
-@media (min-width: 576px) {
-   .header .text-header h1 {
-      font-size: 3.2rem;
-   }
-
-   .header .container {
-      width: 90%;
-      max-width: 600px;
-   }
-
-   .widget-header {
-      width: 80%;
-      max-width: 600px;
-   }
-
-   .widget-header-item img {
-      width: 40px;
-   }
-
    .satu-ayat .container {
       width: 90%;
       max-width: 100%;
@@ -245,45 +196,3 @@ button {
       width: 62px;
    }
 }
-
-
-
-
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
-
-
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: #d68925;
-}
-  .parallax-container .section {
-    width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
