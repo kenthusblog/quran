@@ -28,7 +28,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="/aquran">Al Qur'an</a></li>
             <li><a href="#sholat">Waktu Sholat</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="#" onclick="profil()" id="desain-web">About</a></li>
         </ul>
         <div class="menu-toggle">
             <input type="checkbox"/>
@@ -401,15 +401,43 @@
 </script>
 
 
-</html>
-                                                          
-                                                             
-                                                             
-                                                             
-                                                             
-                                                             
-                                                             
-                                                             
-                                                             
-                                                             
+                              
+// Modal
+  <script type="text/javascript">
+                           
+    const desainWeb = document.getElementById("desain-web");
+    const aplikasiDekstop = document.getElementById("aplikasi-dekstop");
+    const sistemInformasi = document.getElementById("sistem-informasi");
+    const aplikasiAndroid = document.getElementById("aplikasi-android");
+    const modalKu = document.querySelector(".modalKu");
+    // Modal desain web
+    function profil() {
+      desainWeb.style.display = "block";
+    }
+    function closeDesainweb() {
+      desainWeb.style.display = "none";
+    }
+    // Modal aplikasi dekstop
+    function openAplikasiDesktop() {
+      aplikasiDekstop.style.display = "block";
+    }
+    function closeAplikasiDekstop() {
+      aplikasiDekstop.style.display = "none";
+    }
+    // Modal sistem informasi
+    function openSistemInformasi() {
+      sistemInformasi.style.display = "block";
+    }
+    function closeSistemInformasi() {
+      sistemInformasi.style.display = "none";
+    }
+    // Modal aplikasi android
+    function openAplikasiAndroid() {
+      aplikasiAndroid.style.display = "block";
+    }
+    function closeAplikasiAndroid() {
+      aplikasiAndroid.style.display = "none";
+    }                              
+                              
+                              
 </html>
