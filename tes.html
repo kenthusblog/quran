@@ -28,7 +28,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="/aquran">Al Qur'an</a></li>
             <li><a href="#sholat">Waktu Sholat</a></li>
-            <li><a href="#desain-web" onclick="profil()">About</a></li>
+            <li><a href="/profil">About</a></li>
         </ul>
         <div class="menu-toggle">
             <input type="checkbox"/>
@@ -314,53 +314,15 @@
                                     
 <!-- Satu Ayat -->
   <section class="satu-ayat py-5 px-3 px-sm-0" style="color: var(--blue);">
-    <div class="container mx-auto mt-5">
+    <div class="container mx-auto mt-5"><div class="col">
       <h3 class="mb-4" style="font-weight: 600;">Satu Ayat Untukmu</h3>
       <h2 class="ayat text-end mb-4" style="line-height: 3.2rem;"></h2>
       <h5 class="surat mb-2" style="font-weight: 600;"></h5>
       <h6 class="arti" style="width: 80%; line-height: 1.4rem;"></h6>
-    </div>
+     </div></div>
   </section>
   <!-- End Satu Ayat -->
                
-                                                               
-                                                               
-  <!-- IKI KANGGO POPUP PROFIL -->
-    <div class="modalKu" id="desain-web">
-      <h1>TENTANG</h1>
-  <div class="skills-content">                                     
-        <div class="modal-isi">
-          
-     <p class="light"><b>Moco Qur'an</b> adalah aplikasi berbasis web yang menyajikan bacaan kitab suci Al-Qur'an lengkap dengan suaranya,
-       Do'a Harian, Kisah Nabi dan Rosul, Jadwal Sholat, Quotes, dll.<br><br>        
-
-Aplikasi ini dibangun dalam bentuk website dan tidak dibangun dalam bentuk aplikasi mobile/ponsel alasannya 
-adalah agar dapat digunakan tanpa harus memasang aplikasi pada perangkat, sehingga tidak memakan ruang penyimpanan yang ada.
-Karena berbasis web, aplikasi ini juga memungkinkan untuk diakses dari berbagai perangkat yang berbeda (cross-platform), 
-entah itu dari komputer, ponsel, ataupun tablet.<br><br>     
-        
-     Web ini memakai bantuan API ( data yang diambil untuk menampilkan menu Al-Quran ) dari beberapa penyedia API.
-     Dengan aplikasi Web ini kamu dapat belajar sekaligus memenuhi kebutuhan Islamimu.<br><br>
-            
-     Bisa diakses secara gratis , digunakan kapan saja dan dimana saja. Semoga bermanfaat :)<br><br>
-
- <h4 class="mb-2" style="font-weight: 500; color: var(--yellow);">Sumber Data Al Qur'an</h4>
-<p class="light">Sumber data seperti ayat-ayat, terjemahan, tafsir dan murottal disediakan melalui API oleh SutanLab 
-yang mana data-datanya dihimpun dari berbagai sumber seperti <a href='https://quran.kemenag.go.id/'>Kementerian Agama</a> 
- untuk terjemahan dan tafsir ayat dalam bahasa Indonesia, 
-<a href='https://api.alquran.cloud/'>Quran Cloud</a> untuk ayat-ayat, meta data ayat, dan audio murottal, 
-         Al-Quran-ID-API untuk tafsir surat dalam bahasa Indonesia.</h6></h4></p>
-  
-      </div></div>
-      <button class="close" onclick="closeDesainweb()">&times;</button>
-    </div>                                                             
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                                    
                                                                      
     <div class="footer">
         Made by <span>&hearts;</span> Kenthus
@@ -439,43 +401,6 @@ yang mana data-datanya dihimpun dari berbagai sumber seperti <a href='https://qu
 
 
                               
-// Modal
-  <script type="text/javascript">
-                           
-    const desainWeb = document.getElementById("desain-web");
-    const aplikasiDekstop = document.getElementById("aplikasi-dekstop");
-    const sistemInformasi = document.getElementById("sistem-informasi");
-    const aplikasiAndroid = document.getElementById("aplikasi-android");
-    const modalKu = document.querySelector(".modalKu");
-    // Modal desain web
-    function profil() {
-      desainWeb.style.display = "block";
-    }
-    function closeDesainweb() {
-      desainWeb.style.display = "none";
-    }
-    // Modal aplikasi dekstop
-    function openAplikasiDesktop() {
-      aplikasiDekstop.style.display = "block";
-    }
-    function closeAplikasiDekstop() {
-      aplikasiDekstop.style.display = "none";
-    }
-    // Modal sistem informasi
-    function openSistemInformasi() {
-      sistemInformasi.style.display = "block";
-    }
-    function closeSistemInformasi() {
-      sistemInformasi.style.display = "none";
-    }
-    // Modal aplikasi android
-    function openAplikasiAndroid() {
-      aplikasiAndroid.style.display = "block";
-    }
-    function closeAplikasiAndroid() {
-      aplikasiAndroid.style.display = "none";
-    }                              
-</script>
                               
                               
 </html>
