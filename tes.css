@@ -1,3 +1,11 @@
+:root {
+   --yellow: #FFD500;
+   --blue1: #003F88;
+   --blue2: #00296B;
+   --white: #F7F7F7;
+   font-size: 12px;
+}
+
 body {
    font-family: 'Montserrat', sans-serif;
    overflow-x: hidden;
