@@ -1093,10 +1093,9 @@ button {
 }
 
    .satu-ayat .container {
-      width: 90%;
+      width: 100%;
       max-width: 100%;
-      background-color: #1e2155;
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+      background-color: #5148f1;
    }
 
    .jadwal-wrapper {
