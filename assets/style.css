@@ -19,6 +19,7 @@ body{
     background-color: #f8f9fa;
     font-family: 'Roboto', 'Montserrat', sans-serif;;
     transition: all 0.3s;
+    overflow-x: hidden;
 }
 nav{
     display: flex;
