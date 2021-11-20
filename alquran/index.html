@@ -123,4 +123,49 @@
 <script src="/surah/index.js"></script>
 
 
+
+<script src="assets/script.js"></script>
+<script>
+    // Dark mode
+    const button = document.getElementById("button");
+
+    const body = document.querySelector("body");
+    const span = document.querySelector(".navbar-brand button span");
+    const navbarBrand = document.querySelector(".navbar-brand a");
+    const wrapH3 = document.querySelector(".wrap-content h3");
+    const wrapH1 = document.querySelector(".wrap-content h1");
+    const line = document.querySelector(".wrap-content .line");
+    const wrapP = document.querySelector(".wrap-content p");
+    const darkFooter = document.querySelector(".footer");
+    const menuToggle = document.querySelector('.menu-toggle input');
+    const navbar = document.querySelector('nav ul');
+    const darkHumberger = document.querySelectorAll('.menu-toggle span');
+
+    button.addEventListener("click", function(){
+        body.classList.toggle('darkBody');
+        span.classList.toggle('darkSpan');
+        navbarBrand.classList.toggle('darkNavbarBrand');
+        wrapH3.classList.toggle('darkWrapH3');
+        wrapH1.classList.toggle('darkWrapH1');
+        line.classList.toggle('darkLine');
+        wrapP.classList.toggle('darkWrapP');
+        darkFooter.classList.toggle("darkFooter");
+        for(let i=0; i<darkHumberger.length; i++){
+            darkHumberger[i].classList.toggle("darkHumberger")
+        }
+    });
+    // Munculkan sidebar
+
+    menuToggle.addEventListener('click',function(){
+        navbar.classList.toggle('slide');
+    });
+</script>
+
+
+
+
+
+
+
+
 </html>
