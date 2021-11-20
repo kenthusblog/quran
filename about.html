@@ -80,6 +80,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
     crossorigin="anonymous" />
+    <link rel="stylesheet" href="/index.css">
 
   
   <!-- CSS  -->
@@ -93,19 +94,20 @@
 <body>
 
   
-  <header>
-        <nav>
-            <span class="logo">Moco Qur'an</span>
-            <a onClick="showmenu()" id="menubar">☰</a>
-            <ul id="navigasi">
-                <a href="/"><li>Home</li></a>
-                <a href="/alquran"><li>Alquran</li></a>
-                <a href="#about"><li>About</li></a>
-                <a href="#untuk"><li>Untuk</li></a>
-                <a href="#lapor"><li>Laporkan Bug</li></a>
-            </ul>
-        </nav>
-    </header>
+   <!-- Navbar -->
+  <nav class="navbar navbar-dark fixed-top py-3" style="color: var(--white); background-color: var(--blue1);">
+    <div class="container">
+      <a class="navbar-brand font-weight-bold" href="https://kenthus.netlify.app/"
+        style="display: grid; grid-template-columns: 1fr 20px; align-items: center; gap: 10px;">
+        <span style="letter-spacing: 3px; font-size: 1.5rem; font-weight: 500; color: var(--yellow);">Moco Qur'an</span>
+        <img src="/img/muslim.webp" alt="Logo" style="width: 50px;">
+      </a>
+    <div style="letter-spacing: .1rem;">
+         <h4 class="nama-surat m-0" style="font-weight: 600; color: #fff;" id="jam"></h4>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
   
       <main>
   
