@@ -437,62 +437,6 @@ nav ul li a:focus{
     border: 1px solid white;
 }
 
-/* MODAL PORTOFOLIO */
-.modalKu{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    text-align: center;
-    padding: 120px 0 0;
-    box-sizing: border-box;
-    animation: modalAnimasi 0.5s ease;
-    animation-fill-mode: forwards;
-    z-index: 1;
-}
-.modalKu h1{
-    color: black;
-    margin-bottom: 50px;
-}
-.modal{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-}
-.modal-content{
-    background-color: white;
-    border-radius: 5px;
-    padding-bottom: 10px;
-    box-sizing: border-box;
-    overflow: hidden;
-    width: 300px;
-    box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
-}
-.modal-content p{
-    color: rgb(39, 39, 39);
-    margin: 10px 0;
-    font-size: 11pt;
-    font-weight: 500;
-}
-.modal img{
-    max-width: 100%;
-}
-.close{
-    color: black;
-    font-size: 40pt;
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-.close:focus{
-    border: none;
-    outline: none;
-}
 
 
 /* CONTACT */
