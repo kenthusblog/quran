@@ -289,13 +289,13 @@ $.ajax({
             </div>
          `;
 
-         $('.tes .container').html(fragmentDaftarSurat);
+        $('.daftar-surat .container').html(fragmentDaftarSurat);
 
          // Mengaktifkan library List.js agar bisa melakukan searching
-         new List('tes', {
+         new List('daftar-surat', {
             valueNames: ['nama', 'arti', 'arab'],
          });
-
+         
          // Lihat detail surat saat tombol expand di click
          const expandDetail = document.querySelectorAll('.expand-detail');
          expandDetail.forEach(expand => {
