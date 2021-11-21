@@ -274,7 +274,24 @@ $.ajax({
          </div>
          `;
 
-        
+  
+      $('.list-surat .container').html(fragmentDaftarSurat);
+
+         // Mengaktifkan library List.js agar bisa melakukan searching
+         new List('list-surat', {
+            valueNames: ['nama', 'arti', 'arab'],
+         });
+         
+         
+         
+         
+         
+         
+         
+            })
+         });
+      })   
+         
 
       // Memberi id pada surat yang terkahir dibaca
       if (JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir) {
