@@ -26,6 +26,15 @@ window.onload = function () {
             tafsir = ayat.tafsir.id.short
 
             fragmentDaftarAyat += `
+               
+               <div class="section-title ">
+                    <h4 class="nama mb-0" style="font-weight: 700;">${surat.name.transliteration.id}</h4>
+                    <p><h6 style="font-weight: 400;">Memiliki <span style="font-weight: 600;">${surat.numberOfVerses} ayat</span></h6></p>
+                </div>
+               
+               
+               
+               
                <div class="ayat p-3 p-sm-4">
                   <div class="mb-0 py-2 me-3">
                      <h3 class="nomer-ayat text-center" style="font-style: italic;">${nomer}.</h3>
