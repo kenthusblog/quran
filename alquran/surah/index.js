@@ -245,10 +245,9 @@ $.ajax({
       let fragmentDaftarSurat = '';
       daftarSurat.forEach(surat => {
          fragmentDaftarSurat += `
-                  <ul class="nama m-0">
-                           Memiliki <span style="font-weight: 600;">${surat.numberOfVerses} ayat</ul>
-                        Merupakan golongan surat <span style="font-weight: 600;">${surat.revelation.id}
-                        </ul>`;
+                   Memiliki <span style="font-weight: 600;">${surat.numberOfVerses} ayat</ul>
+                   Merupakan golongan surat <span style="font-weight: 600;">${surat.revelation.id}
+                        `;
 
          $('.tes').html(fragmentDaftarSurat);
 
