@@ -58,6 +58,8 @@
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
+    overflow-x: hidden;
+    background-color: var(--white);
 }
 
 a {
@@ -1915,6 +1917,20 @@ section {
     color: #fff;
     text-decoration: none;
 }
+
+
+
+
+
+
+:root {
+   --yellow: #FFD500;
+   --blue1: #003F88;
+   --blue2: #00296B;
+   --white: #F7F7F7;
+   font-size: 12px;
+}
+
 
 .jadwal-wrapper {
    width: 90%;
