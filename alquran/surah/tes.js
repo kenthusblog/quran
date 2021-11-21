@@ -48,10 +48,10 @@ $.ajax({
             </div>
          `;
 
-         $('.daftar .container').html(fragmentDaftarSurat);
+         $('.tes .container').html(fragmentDaftarSurat);
 
          // Mengaktifkan library List.js agar bisa melakukan searching
-         new List('daftar', {
+         new List('tes', {
             valueNames: ['nama', 'arti', 'arab'],
          });
 
