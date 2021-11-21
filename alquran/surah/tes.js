@@ -283,56 +283,171 @@ window.onload = function () {
   
       $('.list-surat .container').html(fragmentDaftarSurat);
 
-         // Mengaktifkan library List.js agar bisa melakukan searching
-         new List('list-surat', {
-            valueNames: ['nama', 'arti', 'arab'],
-         });
-         
-         // Lihat detail surat saat tombol expand di click
+         document.querySelector('.autoplay').style.display = 'flex'
+
+         // Lihat detail ayat saat tombol expand di click
          const expandDetail = document.querySelectorAll('.expand-detail');
          expandDetail.forEach(expand => {
             expand.addEventListener('click', function () {
-               this.parentElement.querySelector('.info-surat').classList.toggle('open');
+               this.parentElement.querySelector('.info-ayat').classList.toggle('open');
                this.classList.toggle('open');
 
-               if (this.parentElement.querySelector('.info-surat').classList.contains('open')) {
-                  const infoMaxHeight = getComputedStyle(this.parentElement.querySelector('.info')).height;
-                  this.parentElement.querySelector('.info-surat').style.height = `calc(${infoMaxHeight} + 2rem)`;
+               if (this.parentElement.querySelector('.info-ayat').classList.contains('open')) {
+                  const infoHeight = getComputedStyle(this.parentElement.querySelector('.info')).height;
+                  this.parentElement.querySelector('.info-ayat').style.height = `calc(${infoHeight} + 2rem)`;
                } else {
-                  this.parentElement.querySelector('.info-surat').style.height = '0';
+                  this.parentElement.querySelector('.info-ayat').style.height = '0';
                }
-         
-         
-         
-         
-         
             })
          });
-      })   
-         
 
-      // Memberi id pada surat yang terkahir dibaca
-      if (JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir) {
-         const bacaanSuratTerakhir = JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir.nomerSurat
-         console.log(bacaanSuratTerakhir)
-         document.querySelectorAll('.surat')[bacaanSuratTerakhir - 1].setAttribute('id', 'last-read')
+         audioSetting();
+
+         // Last-read labels
+         const lastReadLabels = document.querySelectorAll('.ayat .last-read');
+         if (JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir && JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir.nomerSurat == nomerSurat) {
+            const bacaanAyatTerakhir = JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir.nomerAyat;
+            lastReadLabels[bacaanAyatTerakhir].classList.add('fas')
+            lastReadLabels[bacaanAyatTerakhir].classList.remove('far')
+
+            // Loncat ke ayat yang terkahir dibaca
+            let elementBacaanAyatTerakhir = $('.last-read.fas').parent().parent();
+            $('html, body').animate({
+               scrollTop: elementBacaanAyatTerakhir.offset().top - parseFloat(getComputedStyle(document.querySelector('nav')).height.replace('px', '')) - 20
+            })
+         }
+
+         // Toggle label last-read saat di click
+         for (let i = 0; i < lastReadLabels.length; i++) {
+            lastReadLabels[i].addEventListener('click', function () {
+               if (lastReadLabels[i].classList.contains('far')) {
+                  this.classList.remove('far')
+                  this.classList.add('fas')
+
+                  for (let j = 0; j < lastReadLabels.length; j++) {
+                     if (j != i) {
+                        lastReadLabels[j].classList.remove('fas')
+                        lastReadLabels[j].classList.add('far')
+                     }
+                  }
+
+                  setBacaanTerakhir(parseInt(nomerSurat), i)
+               } else {
+                  this.classList.remove('fas')
+                  this.classList.add('far')
+
+                  const islamicBit = JSON.parse(localStorage.getItem('Moco Quran'))
+                  delete islamicBit.bacaanTerakhir
+
+                  setToLocalStorage(islamicBit)
+               }
+            })
+         }
       }
+   })
+}
+
+// Saat salah satu audio diputar, maka stop audio yang lain dipause
+function audioSetting() {
+   const audios = document.querySelectorAll('audio')
+   for (let i = 0; i < audios.length; i++) {
+      audios[i].addEventListener('play', function () {
+         this.currentTime = 0;
+         for (let j = 0; j < audios.length; j++) {
+            if (j != i) {
+               audios[j].pause();
+            }
+         }
+      })
+   }
+}
+
+// Membuat fitur autoplay
+let indexAwal = 0;
+let isPlayed = false;
+
+document.querySelector('.autoplay').addEventListener('click', function () {
+   if (this.classList.contains('fa-play')) {
+      isPlayed = true;
+      this.classList.remove('fa-play')
+      this.classList.add('fa-pause')
+      autoPlay(indexAwal)
+   } else {
+      isPlayed = false;
+      this.classList.remove('fa-pause')
+      this.classList.add('fa-play')
    }
 })
 
-// Loncat ke surat yang terkahir dibaca
-$('.index-surat span').on('click', function () {
-   let elementTujuan = $('#last-read');
-
-   const mediaQueryXS = window.matchMedia('(max-width: 576px)').matches;
-
-   if (mediaQueryXS) {
-      $('html, body').animate({
-         scrollTop: elementTujuan.offset().top - 120
-      })
-   } else {
-      $('html, body').animate({
-         scrollTop: elementTujuan.offset().top - 100
-      })
+function autoPlay(index) {
+   const audios = document.querySelectorAll('audio');
+   let indexPlayedAudio = index;
+   if (indexPlayedAudio === document.querySelectorAll('.ayat').length) {
+      document.querySelector('.autoplay').classList.remove('fa-pause')
+      document.querySelector('.autoplay').classList.add('fa-play')
+      return
    }
-});
+
+   // Auto scroll saat berganti audio bacaan ayat
+   document.querySelectorAll('.ayat')[indexPlayedAudio].classList.add('current-play')
+   const bacaanAyat = $('.current-play')
+   $('html, body').animate({
+      scrollTop: bacaanAyat.offset().top - parseFloat(getComputedStyle(document.querySelector('nav')).height.replace('px', '')) - 20
+   })
+
+   audios[indexPlayedAudio].play();
+   const checkPlayedAudio = setInterval(() => {
+      if (isPlayed) {
+         if (audios[indexPlayedAudio].paused) {
+            clearInterval(checkPlayedAudio)
+            document.querySelectorAll('.ayat')[indexPlayedAudio].classList.remove('current-play')
+            autoPlay(++indexPlayedAudio)
+         }
+      } else {
+         indexAwal = indexPlayedAudio
+         audios[indexPlayedAudio].pause()
+      }
+   }, 1);
+}
+
+// Mendapatakn surat dan ayat yang terkahir dibaca
+if (!localStorage.getItem('Moco Quran')) {
+   localStorage.setItem('Moco Quran', JSON.stringify({}))
+}
+
+function setBacaanTerakhir(nomerSurat, nomerAyat) {
+   const islamicBit = JSON.parse(localStorage.getItem('Moco Quran'))
+   islamicBit.bacaanTerakhir = {
+      nomerSurat: nomerSurat,
+      nomerAyat: nomerAyat
+   }
+   setToLocalStorage(islamicBit)
+}
+
+function setToLocalStorage(value) {
+   localStorage.setItem('Moco Quran', JSON.stringify(value))
+}
+
+
+// Auto last-read
+// const navbarHeight = parseFloat(getComputedStyle(document.querySelector('nav')).height.replace('px', ''));
+// const daftarAyatPadTop = parseFloat(getComputedStyle(document.querySelector('.daftar-ayat')).paddingTop.replace('px', ''));
+
+// window.onscroll = function () {
+//    const daftarAyat = document.querySelectorAll('.ayat');
+//    const ayatMarBottom = parseFloat(getComputedStyle(document.querySelector('.ayat')).marginBottom.replace('px', ''));
+
+//    const minOffsetLastRead = navbarHeight * -1 - daftarAyatPadTop - (ayatMarBottom / 3)
+//    const maxOffsetLastRead = navbarHeight + daftarAyatPadTop + (ayatMarBottom / 3)
+
+//    console.log(`${minOffsetLastRead} - ${maxOffsetLastRead}`)
+
+//    daftarAyat.forEach((ayat, nomer) => {
+//       console.log(`${nomer} : ${ayat.getBoundingClientRect().y}`)
+//       if (ayat.getBoundingClientRect().y > minOffsetLastRead && ayat.getBoundingClientRect().y <= maxOffsetLastRead) {
+//          ayat.classList.add('last-read')
+//       } else {
+//          ayat.classList.remove('last-read')
+//       }
+//    })
+// }
