@@ -178,6 +178,7 @@ audio:focus {
 
 .window {
 	width: 500px;
+	height: 100px;
 	background: #fff;
 	border-radius: 10px;
 	position: relative;
