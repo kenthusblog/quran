@@ -268,6 +268,11 @@ $.ajax({
                   
                   
       <div class="info-box mb-2">
+      
+      <h4 style="font-size: 20px;">
+                ${surat.number}.  <a href="surah/?nama=${surat.name.transliteration.id}&nomer=${surat.number}"
+                  style="display: block; color: var(--blue2)" ></h4></a>
+      
             <h6 style="font-weight: 400;">Memiliki ${surat.numberOfVerses} ayat</h6>
                 <h6 style="font-weight: 400;">Merupakan golongan surat <span style="font-weight: 600;">${surat.revelation.id}</span></h6>
                           <h6 style="font-weight: 400;">${surat.tafsir.id}</h6>
