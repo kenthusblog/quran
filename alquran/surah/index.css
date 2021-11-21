@@ -254,7 +254,7 @@ audio:focus {
    transition: .3s;
 }
 
-.list-surat .surat .expand-detail {
+.list-surat .surat {
    width: 100%;
    cursor: pointer;
    position: absolute;
