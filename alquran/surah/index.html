@@ -181,54 +181,24 @@
    
    
    
+  <script>
+  $( function() {
+    $( "#dialog-message" ).dialog({
+      modal: true,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  } );
+  </script>   
    
-   
-   
-   <div class="messagepop pop">
-    <form method="post" id="new_message" action="/messages">
-        <p><label for="email">Your email or name</label><input type="text" size="30" name="email" id="email" /></p>
-        <p><label for="body">Message</label><textarea rows="6" name="body" id="body" cols="35"></textarea></p>
-        <p><input type="submit" value="Send Message" name="commit" id="message_submit"/> or <a class="close" href="/">Cancel</a></p>
-    </form>
-</div>
-
-<a href="/contact" id="list-surat">Contact Us</a>
-   
-   
-   
-   
-   <script>
-   function deselect(e) {
-  $('.pop').slideFadeToggle(function() {
-    e.removeClass('selected');
-  });    
-}
-
-$(function() {
-  $('#list-surat').on('click', function() {
-    if($(this).hasClass('selected')) {
-      deselect($(this));               
-    } else {
-      $(this).addClass('selected');
-      $('.pop').slideFadeToggle();
-    }
-    return false;
-  });
-
-  $('.close').on('click', function() {
-    deselect($('#contact'));
-    return false;
-  });
-});
-
-$.fn.slideFadeToggle = function(easing, callback) {
-  return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
-};
-   </script> 
-   
-   
-   
-   
+   <div id="dialog-message" title="Download complete">
+  <p>
+    <div class="list-surat" style="color: var(--blue2);">
+                  <div class="container"></div></div>
+  </p></div>
    
    
    
