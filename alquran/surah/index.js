@@ -16,7 +16,7 @@ window.onload = function () {
 
          $('.nama-surat').text(namaSurat);
          $('title').text(`Moco Qur'an - Surah ${namaSurat}`)
-         
+
          dataAyat.forEach(ayat => {
             const audio = ayat.audio.primary
             nomer = ayat.number.inSurah
@@ -29,9 +29,7 @@ window.onload = function () {
                <div class="ayat p-3 p-sm-4">
                   <div class="mb-0 py-2 me-3">
                      <h3 class="nomer-ayat text-center" style="font-style: italic;">${nomer}.</h3>
-                    <a class="one" data-content="Berhasil disimpan">
-                    <span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;"></span>
-                    </a>
+                     <span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;"></span>
                   </div>
                   <div class="detail-ayat mb-2 w-100">
                      <div class="bacaan-ayat mb-3">
@@ -56,6 +54,7 @@ window.onload = function () {
                         </div>
                      </div>
                   </div>
+
                   <span class="expand-detail">
                      <img src="../../img/arrow-down.png">
                   </span>
@@ -63,7 +62,7 @@ window.onload = function () {
             `;
          })
 
-         $('.tes').html(fragmentDaftarAyat);
+         $('.daftar-ayat .container').html(fragmentDaftarAyat);
 
          document.querySelector('.autoplay').style.display = 'flex'
 
@@ -213,7 +212,7 @@ function setToLocalStorage(value) {
 
 // Auto last-read
 // const navbarHeight = parseFloat(getComputedStyle(document.querySelector('nav')).height.replace('px', ''));
-// const daftarAyatPadTop = parseFloat(getComputedStyle(document.querySelector('.tes')).paddingTop.replace('px', ''));
+// const daftarAyatPadTop = parseFloat(getComputedStyle(document.querySelector('.daftar-ayat')).paddingTop.replace('px', ''));
 
 // window.onscroll = function () {
 //    const daftarAyat = document.querySelectorAll('.ayat');
