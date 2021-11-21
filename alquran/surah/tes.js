@@ -250,33 +250,14 @@ $.ajax({
       let fragmentDaftarSurat = '';
       daftarSurat.forEach(surat => {
          fragmentDaftarSurat += `
-          <!--<div class="icon-box iconbox-blue">
-                <div class="icon2"></div>
-               <h4 style="font-size: 20px;">
-                ${surat.number}.  <a href="surah/?nama=${surat.name.transliteration.id}&nomer=${surat.number}"
-                  style="display: block; color: var(--blue2)" ></h4>
-                  
-                   
-                           <h4 style="font-size: 20px;">${surat.name.transliteration.id}</h4>
-                           <p>${surat.name.translation.id}</p>
-                        <h1 class="arab text-end mt-1 mt-sm-0 me-3">${surat.name.short}</h1>
-                     </div>
-                  </a>-->
-                  
-                  
-                  
-                  
-                  
-      <div class="info-box mb-2">
-      
-      <h4 style="font-size: 20px;">
+         <div class="info-box mb-2">
+            <h4 style="font-size: 20px;">
                 <a href="surah/?nama=${surat.name.transliteration.id}&nomer=${surat.number}"
                   style="display: block; color: var(--blue2)" ></h4></a>
                         <h4 style="font-size: 20px;">${surat.number}.  ${surat.name.transliteration.id}</h4>
                            <p>${surat.name.translation.id}</p>
                         <h1 class="arab text-end mt-1 mt-sm-0 me-3">${surat.name.short}</h1
-      
-            <h6 style="font-weight: 400;">Memiliki ${surat.numberOfVerses} ayat</h6>
+                  <h6 style="font-weight: 400;">Memiliki ${surat.numberOfVerses} ayat</h6>
                 <h6 style="font-weight: 400;">Merupakan golongan surat <span style="font-weight: 600;">${surat.revelation.id}</span></h6>
                     <h6 style="font-weight: 400;">${surat.tafsir.id}</h6>
          </div>
