@@ -289,10 +289,10 @@ $.ajax({
             </div>
          `;
 
-        $('.daftar-surat .container').html(fragmentDaftarSurat);
+        $('.list-surat .container').html(fragmentDaftarSurat);
 
          // Mengaktifkan library List.js agar bisa melakukan searching
-         new List('daftar-surat', {
+         new List('list-surat', {
             valueNames: ['nama', 'arti', 'arab'],
          });
          
