@@ -239,6 +239,7 @@ function setToLocalStorage(value) {
 //BATAS
 
 
+
 $.ajax({
    url: 'https://api.quran.sutanlab.id/surah',
    success: results => {
@@ -249,19 +250,21 @@ $.ajax({
       let fragmentDaftarSurat = '';
       daftarSurat.forEach(surat => {
          fragmentDaftarSurat += `
-            <div class="surat p-3 p-sm-4">
-               <h3 class="nomer-surat text-center mb-0 py-2 me-3" style="font-style: italic;">${surat.number}.</h3>
-               <div class="detail-surat mb-1">
-                  <a href="surah/?nama=${surat.name.transliteration.id}&nomer=${surat.number}"
-                  style="display: block; color: var(--blue2)" >
-                     <div class="nama-surat">
-                        <div div style="letter-spacing: .1rem;">
-                           <h4 class="nama mb-0" style="font-weight: 700;">${surat.name.transliteration.id}</h4>
-                           <h6 class="arti">${surat.name.translation.id}</h6>
-                        </div>
+           <div class="icon-box iconbox-blue">
+                <div class="icon2"></div>
+               <h4 style="font-size: 20px;">
+                ${surat.number}.  <a href="surah/?nama=${surat.name.transliteration.id}&nomer=${surat.number}"
+                  style="display: block; color: var(--blue2)" ></h4>
+                  
+                   
+                           <h4 style="font-size: 20px;">${surat.name.transliteration.id}</h4>
+                           <p>${surat.name.translation.id}</p>
                         <h1 class="arab text-end mt-1 mt-sm-0 me-3">${surat.name.short}</h1>
                      </div>
                   </a>
+                  
+                  
+                  
                   <div class="info-surat mb-3 mb-sm-0" style="overflow: hidden;">
                      <div class="info mt-3" style="letter-spacing: 1px">
                         <ul class="ayat m-0">
@@ -283,9 +286,6 @@ $.ajax({
                   </div>
                </div>
 
-               <span class="expand-detail">
-                  <img src="../img/arrow-down.png">
-               </span>
             </div>
          `;
 
