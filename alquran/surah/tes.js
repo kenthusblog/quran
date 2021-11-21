@@ -250,7 +250,7 @@ $.ajax({
       let fragmentDaftarSurat = '';
       daftarSurat.forEach(surat => {
          fragmentDaftarSurat += `
-           <div class="icon-box iconbox-blue">
+          <!--<div class="icon-box iconbox-blue">
                 <div class="icon2"></div>
                <h4 style="font-size: 20px;">
                 ${surat.number}.  <a href="surah/?nama=${surat.name.transliteration.id}&nomer=${surat.number}"
@@ -261,32 +261,17 @@ $.ajax({
                            <p>${surat.name.translation.id}</p>
                         <h1 class="arab text-end mt-1 mt-sm-0 me-3">${surat.name.short}</h1>
                      </div>
-                  </a>
+                  </a>-->
                   
                   
                   
-                  <div class="info-surat mb-3 mb-sm-0" style="overflow: hidden;">
-                     <div class="info mt-3" style="letter-spacing: 1px">
-                        <ul class="ayat m-0">
-                           <li>
-                              <h6 style="font-weight: 400;">Memiliki <span style="font-weight: 600;">${surat.numberOfVerses} ayat</span></h6>
-                           </li>
-                        </ul>
-                        <ul class="jenis m-0">
-                           <li>
-                              <h6 style="font-weight: 400;">Merupakan golongan surat <span style="font-weight: 600;">${surat.revelation.id}</span></h6>
-                           </li>
-                        </ul>
-                        <ul class="penjelasan m-0">
-                           <li style="line-height: 1.5rem">
-                              <h6 style="font-weight: 400;">${surat.tafsir.id}</h6>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-
-            </div>
+                  
+                  
+      <div class="icon-box iconbox-blue">
+            <h6 style="font-weight: 400;">Memiliki ${surat.numberOfVerses} ayat</h6>
+                <h6 style="font-weight: 400;">Merupakan golongan surat <span style="font-weight: 600;">${surat.revelation.id}</span></h6>
+                          <h6 style="font-weight: 400;">${surat.tafsir.id}</h6>
+         </div>
          `;
 
         $('.list-surat .container').html(fragmentDaftarSurat);
