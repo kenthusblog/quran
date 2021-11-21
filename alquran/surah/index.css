@@ -218,7 +218,7 @@ audio:focus {
    width: 100%;
 }
 
-.daftar-surat .surat {
+.list-surat .surat {
    background-color: #ffffff;
    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .15);
    border-radius: 6px;
@@ -234,27 +234,27 @@ audio:focus {
    border: .2rem solid var(--blue1);
 }
 
-.daftar-surat .nomer-surat {
+.list-surat .nomer-surat {
    font-size: 1.5rem;
 }
 
-.daftar-surat .nama-surat {
+.list-surat .nama-surat {
    display: grid;
    grid-template-columns: 60% 1fr;
    align-items: center;
    cursor: pointer;
 }
 
-.daftar-surat .nama-surat .nama {
+.list-surat .nama-surat .nama {
    font-size: 1.25rem;
 }
 
-.daftar-surat .info-surat {
+.list-surat .info-surat {
    height: 0;
    transition: .3s;
 }
 
-.daftar-surat .surat .expand-detail {
+.list-surat .surat .expand-detail {
    width: 100%;
    cursor: pointer;
    position: absolute;
@@ -265,18 +265,18 @@ audio:focus {
    text-align: center;
 }
 
-.daftar-surat .surat .expand-detail img {
+.list-surat .surat .expand-detail img {
    width: 1.4rem;
    margin: .7rem 0;
    transform: rotateX(180deg);
    transition: .3s;
 }
 
-.daftar-surat .surat .expand-detail.open img {
+.list-surat .surat .expand-detail.open img {
    transform: rotateX(0);
 }
 
-.daftar-surat .surat .bookmark {
+.list-surat .surat .bookmark {
    cursor: pointer;
    text-align: center;
    font-size: 1.4rem;
