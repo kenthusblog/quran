@@ -244,56 +244,43 @@
 
 
 <style>
-/* Popup container - can be anything you want */
-.popup {
+.tooltip {
   position: relative;
   display: inline-block;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  border-bottom: 1px dotted black;
 }
 
-/* The actual popup */
-.popup .popuptext {
+.tooltip .tooltiptext {
   visibility: hidden;
-  width: 160px;
+  width: 120px;
   background-color: #555;
   color: #fff;
+  text-align: center;
   border-radius: 6px;
-  padding: 8px 0;
+  padding: 5px 0;
+  position: absolute;
   z-index: 1;
   bottom: 125%;
   left: 50%;
-  margin-left: -80px;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-/* Popup arrow */
-.popup .popuptext::after {
+.tooltip .tooltiptext::after {
   content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
   border-color: #555 transparent transparent transparent;
 }
 
-/* Toggle this class - hide and show the popup */
-.popup .show {
+.tooltip:hover .tooltiptext {
   visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
+  opacity: 1;
 }
 </style>
 
@@ -304,9 +291,6 @@ function myFunction() {
   popup.classList.toggle("show");
 }
 </script>
-
-
-
 
 
 
