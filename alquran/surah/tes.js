@@ -270,9 +270,9 @@ $.ajax({
       <div class="info-box mb-2">
       
       <h4 style="font-size: 20px;">
-                ${surat.number}.  <a href="surah/?nama=${surat.name.transliteration.id}&nomer=${surat.number}"
+                <a href="surah/?nama=${surat.name.transliteration.id}&nomer=${surat.number}"
                   style="display: block; color: var(--blue2)" ></h4></a>
-                        <h4 style="font-size: 20px;">${surat.name.transliteration.id}</h4>
+                        <h4 style="font-size: 20px;">${surat.number}.  ${surat.name.transliteration.id}</h4>
                            <p>${surat.name.translation.id}</p>
                         <h1 class="arab text-end mt-1 mt-sm-0 me-3">${surat.name.short}</h1
       
