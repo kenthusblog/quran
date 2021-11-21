@@ -243,6 +243,18 @@
 
 
 
+<style>
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 /* The actual popup */
 .popup .popuptext {
   visibility: hidden;
@@ -258,10 +270,7 @@
   margin-left: -80px;
 }
 
-
-
 /* Popup arrow */
-<style>
 .popup .popuptext::after {
   content: "";
   position: absolute;
