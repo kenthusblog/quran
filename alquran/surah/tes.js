@@ -274,29 +274,7 @@ $.ajax({
          </div>
          `;
 
-        $('.list-surat .container').html(fragmentDaftarSurat);
-
-         // Mengaktifkan library List.js agar bisa melakukan searching
-         new List('list-surat', {
-            valueNames: ['nama', 'arti', 'arab'],
-         });
-         
-         // Lihat detail surat saat tombol expand di click
-         const expandDetail = document.querySelectorAll('.expand-detail');
-         expandDetail.forEach(expand => {
-            expand.addEventListener('click', function () {
-               this.parentElement.querySelector('.info-surat').classList.toggle('open');
-               this.classList.toggle('open');
-
-               if (this.parentElement.querySelector('.info-surat').classList.contains('open')) {
-                  const infoMaxHeight = getComputedStyle(this.parentElement.querySelector('.info')).height;
-                  this.parentElement.querySelector('.info-surat').style.height = `calc(${infoMaxHeight} + 2rem)`;
-               } else {
-                  this.parentElement.querySelector('.info-surat').style.height = '0';
-               }
-            })
-         });
-      })
+        
 
       // Memberi id pada surat yang terkahir dibaca
       if (JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir) {
