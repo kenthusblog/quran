@@ -239,17 +239,34 @@ function setToLocalStorage(value) {
 //BATAS
 
 
+// Mengambil parameter nama dan nomer surat dari url
+window.onload = function () {
+   const parameter = document.location.href.split('?')[1].split('&');
+   const nomerSurat = parameter[1].split('=')[1]
 
-$.ajax({
-   url: 'https://api.quran.sutanlab.id/surah',
-   success: results => {
-      // Mengecek apakah yang dihasilkan dari request API adalah JSON atau String
-      results = typeof results == 'string' ? JSON.parse(results) : results
+   // Request ke api dengan parameter yang sudah diambil
+   $.ajax({
+      url: `https://api.quran.sutanlab.id/surah/${nomerSurat}`,
+      success: results => {
+         // Mengecek apakah yang dihasilkan dari request API adalah JSON atau String
+         results = typeof results == 'string' ? JSON.parse(results) : results
 
-      const daftarSurat = results.data;
-      let fragmentDaftarSurat = '';
-      daftarSurat.forEach(surat => {
-         fragmentDaftarSurat += `
+         const dataAyat = results.data.verses;
+         const namaSurat = results.data.name.transliteration.id
+         let fragmentDaftarAyat = '';
+
+         $('.nama-surat').text(namaSurat);
+         $('title').text(`Moco Qur'an - Surah ${namaSurat}`)
+
+         dataAyat.forEach(ayat => {
+            const audio = ayat.audio.primary
+            nomer = ayat.number.inSurah
+            teksArab = ayat.text.arab
+            teksLatin = ayat.text.transliteration.en
+            arti = ayat.translation.id
+            tafsir = ayat.tafsir.id.short
+
+            fragmentDaftarAyat += `
          <div class="info-box mb-2">
             <h4 style="font-size: 20px;">
                 <a href="surah/?nama=${surat.name.transliteration.id}&nomer=${surat.number}"
