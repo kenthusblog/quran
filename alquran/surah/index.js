@@ -16,7 +16,8 @@ window.onload = function () {
 
          $('.nama-surat').text(namaSurat);
          $('title').text(`Moco Qur'an - Surah ${namaSurat}`)
-
+         $('.section-title').text(dataAyat);
+         
          dataAyat.forEach(ayat => {
             const audio = ayat.audio.primary
             nomer = ayat.number.inSurah
