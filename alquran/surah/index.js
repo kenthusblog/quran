@@ -63,7 +63,7 @@ window.onload = function () {
             `;
          })
 
-         $('.section-title').html(fragmentDaftarAyat);
+         $('.tes').html(fragmentDaftarAyat);
 
          document.querySelector('.autoplay').style.display = 'flex'
 
@@ -213,7 +213,7 @@ function setToLocalStorage(value) {
 
 // Auto last-read
 // const navbarHeight = parseFloat(getComputedStyle(document.querySelector('nav')).height.replace('px', ''));
-// const daftarAyatPadTop = parseFloat(getComputedStyle(document.querySelector('.section-title')).paddingTop.replace('px', ''));
+// const daftarAyatPadTop = parseFloat(getComputedStyle(document.querySelector('.tes')).paddingTop.replace('px', ''));
 
 // window.onscroll = function () {
 //    const daftarAyat = document.querySelectorAll('.ayat');
@@ -256,7 +256,7 @@ $.ajax({
                            </li>
                         </ul>`;
 
-         $('.section-title').html(fragmentDaftarSurat);
+         $('.tes').html(fragmentDaftarSurat);
 
          // Mengaktifkan library List.js agar bisa melakukan searching
          new List('daftar-surat', {
