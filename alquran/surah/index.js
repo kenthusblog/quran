@@ -12,11 +12,12 @@ window.onload = function () {
 
          const dataAyat = results.data.verses;
          const namaSurat = results.data.name.transliteration.id
+         const jumlah = results.data.surat.numberOfVerses
          let fragmentDaftarAyat = '';
 
          $('.nama-surat').text(namaSurat);
          $('title').text(`Moco Qur'an - Surah ${namaSurat}`)
-         $('.section-title').text(dataAyat);
+         $('.section-title').text(`${jumlah}`)
          
          dataAyat.forEach(ayat => {
             const audio = ayat.audio.primary
