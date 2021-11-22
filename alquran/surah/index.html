@@ -240,16 +240,13 @@
            const parameter = document.location.href.split('?')[1].split('&');
                const nomerSurat = parameter[1].split('=')[1]
    
-	// Request ke api dengan parameter yang sudah diambil
+   // Request ke api dengan parameter yang sudah diambil
    $.ajax({
       url: `https://api.quran.sutanlab.id/surah/${nomerSurat}`,
       success: results => {
          // Mengecek apakah yang dihasilkan dari request API adalah JSON atau String
          results = typeof results == 'string' ? JSON.parse(results) : results
-      
-	const dataAyat = results.data.verses;
-        const namaSurat = results.data.name.transliteration.id      
-	      
+           
       const daftarSurat = results.data;
       let fragmentDaftarSurat = '';
       daftarSurat.forEach(surat => {
@@ -295,52 +292,13 @@
 
          $('.list-ayat .container').html(fragmentDaftarSurat);
 
-         // Mengaktifkan library List.js agar bisa melakukan searching
-         new List('list-ayat', {
-            valueNames: ['nama', 'arti', 'arab'],
-         });
+                 
 
-         // Lihat detail surat saat tombol expand di click
-         const expandDetail = document.querySelectorAll('.expand-detail');
-         expandDetail.forEach(expand => {
-            expand.addEventListener('click', function () {
-               this.parentElement.querySelector('.info-surat').classList.toggle('open');
-               this.classList.toggle('open');
-
-               if (this.parentElement.querySelector('.info-surat').classList.contains('open')) {
-                  const infoMaxHeight = getComputedStyle(this.parentElement.querySelector('.info')).height;
-                  this.parentElement.querySelector('.info-surat').style.height = `calc(${infoMaxHeight} + 2rem)`;
-               } else {
-                  this.parentElement.querySelector('.info-surat').style.height = '0';
-               }
-            })
-         });
       })
 
-      // Memberi id pada surat yang terkahir dibaca
-      if (JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir) {
-         const bacaanSuratTerakhir = JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir.nomerSurat
-         console.log(bacaanSuratTerakhir)
-         document.querySelectorAll('.surat')[bacaanSuratTerakhir - 1].setAttribute('id', 'last-read')
-      }
-   }
-})
+      
 
-// Loncat ke surat yang terkahir dibaca
-$('.index-surat span').on('click', function () {
-   let elementTujuan = $('#last-read');
 
-   const mediaQueryXS = window.matchMedia('(max-width: 576px)').matches;
-
-   if (mediaQueryXS) {
-      $('html, body').animate({
-         scrollTop: elementTujuan.offset().top - 120
-      })
-   } else {
-      $('html, body').animate({
-         scrollTop: elementTujuan.offset().top - 100
-      })
-   }
 });
 	
     </script>
