@@ -27,10 +27,8 @@ window.onload = function () {
 
             fragmentDaftarAyat += `
                <div class="container">
-                  <div class="mb-0 py-2 me-3">
-                     <h3 class="nomer-ayat text-center" style="font-style: italic;"><p>${nomer}.</p></h3>
+                     <p>${nomer}.</p>
                      <span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;"></span>
-                  </div>
                   <div class="detail-ayat mb-2 w-100">
                      <div class="bacaan-ayat mb-3">
                         <audio controls>
