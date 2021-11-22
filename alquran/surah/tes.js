@@ -12,10 +12,10 @@ window.onload = function () {
 
          const dataAyat = results.data.verses;
          const namaSurat = results.data.name.transliteration.id
-         let fragmentDaftarAyat = '';
+         let fragmentlistAyat = '';
 
          $('.nama-surat').text(namaSurat);
-         $('title').text(`Islamic Bit - Surah ${namaSurat}`)
+         $('title').text(`Moco QURAN - Surah ${namaSurat}`)
 
          dataAyat.forEach(ayat => {
             const audio = ayat.audio.primary
@@ -25,7 +25,7 @@ window.onload = function () {
             arti = ayat.translation.id
             tafsir = ayat.tafsir.id.short
 
-            fragmentDaftarAyat += `
+            fragmentlistAyat += `
                <div class="ayat p-3 p-sm-4">
                   <div class="mb-0 py-2 me-3">
                      <h3 class="nomer-ayat text-center" style="font-style: italic;">${nomer}.</h3>
@@ -62,7 +62,7 @@ window.onload = function () {
             `;
          })
 
-         $('.list-ayat .container').html(fragmentDaftarAyat);
+         $('.list-ayat .container').html(fragmentlistAyat);
 
          document.querySelector('.autoplay').style.display = 'flex'
 
