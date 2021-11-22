@@ -235,14 +235,21 @@
 
 
 <script>
-
+     // Mengambil parameter nama dan nomer surat dari url
+      window.onload = function () {
+           const parameter = document.location.href.split('?')[1].split('&');
+               const nomerSurat = parameter[1].split('=')[1]
+   
 	// Request ke api dengan parameter yang sudah diambil
    $.ajax({
       url: `https://api.quran.sutanlab.id/surah/${nomerSurat}`,
       success: results => {
          // Mengecek apakah yang dihasilkan dari request API adalah JSON atau String
          results = typeof results == 'string' ? JSON.parse(results) : results
-
+      
+	const dataAyat = results.data.verses;
+        const namaSurat = results.data.name.transliteration.id      
+	      
       const daftarSurat = results.data;
       let fragmentDaftarSurat = '';
       daftarSurat.forEach(surat => {
