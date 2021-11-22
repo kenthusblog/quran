@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+
+        <title class="title"></title>
+    </head>
+    <body>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="/">Al - Quran</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/jokopurnomo07">Github</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-body getJudul">
+                    <h4 class="nama_surah">Nama Surah</h4>
+                    <span class="jumlah">Jumlah Ayat : arti pembukaan akwoaowkoaw</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4 tafsiran">
+
+        </div>
+
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+
+    <script>
+        $(document).ready( function () {
+            
+            let baseUrl = (window.location).href; // You can also use document.URL
+            let koopId = baseUrl.substring(baseUrl.lastIndexOf('=') + 1);
+
+            $.ajax({
+                url: 'https://equran.id/api/tafsir/' + koopId,
+                type: 'GET',
+            })
+            .done(function(data) {
+
+                $('.title').html('Surah ' + data.nama_latin + ' | Al Quran Digital Indonesia ')
+                $('.nama_surah').html(data.nama_latin + ' - ' + data.nama)
+                $('.jumlah').html('Jumlah Ayat : ' + data.jumlah_ayat + ' | ' + 'Arti : ' + data.arti)
+
+                $.each(data.tafsir, function (key, value) {
+                    
+                    let card =  `
+                    <div class="card border-success mb-3">
+                        <div class="card-body text-success">
+                            <span class="ayat_ke">Ayat ke. ${value.ayat}</span>
+                            <p class="card-text">${value.tafsir}</p>
+                        </div>
+                    </div> 
+                    `
+
+                    $('.tafsiran').append(card)
+
+                });
+
+            })
+
+        });
+    </script>
+
+
+</html>
