@@ -104,7 +104,7 @@ window.onload = function () {
          
          
 
-         $('.daftar-ayat .container').html(fragmentDaftarAyat);
+         $('.list2-ayat .container').html(fragmentDaftarAyat);
          $('.list-ayat .container').html(fragmentlistAyat);
    
          document.querySelector('.autoplay').style.display = 'flex'
