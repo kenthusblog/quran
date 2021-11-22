@@ -67,7 +67,7 @@ $('#surah-list').on('click', '.surah-name', function() {
                     </div>
                 `);
             } else {
-                $('#surah-content').append(`
+                $('#list-ayat').append(`
                     <div class="back-bar">
                         <p><a href="./index.html"><span class="fas fa-angle-left"></span> Kembali</a></p>
                     </div>
