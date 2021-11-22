@@ -167,6 +167,8 @@
 </div>
    
 
+	
+	        <div class="row" id="viewData"></div>
   
    
    
@@ -245,10 +247,47 @@
     <script src="tes.js "></script>
 
 <script>
-function pesan(){
-	document.getElementById("last-read").innerHTML = "<p>Berhasil disimpan</p>";
-}
-</script>
+$.ajax({
+            url: "https://api.quran.sutanlab.id/surah/${nomerSurat}",
+            method: "get",
+            dataType: "json",
+            success: function(data){
+                var val = "";
+                $.each(data, function(index, value){
+                    val += `
+                        <div class="col-md-4 col-sm-8 col-xs-10 col-12 mx-auto">
+                            <a href="comming-soon" class="text-dark">
+                                <div class="card mb-3 shadow-sm">
+                                    <div class="card-body">
+                                        <h4 class="text-right">${nomer}.</h4>
+                                        <table width="100%" class="mb-3">
+                                            <tr>
+                                                <th width="40%">Artinya</th>
+                                                <td valign="top" width="1%"> : </td>
+                                                <td>`+ value.arti +`</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Jumlah Ayat</th>
+                                                <td valign="top" width="1%"> : </td>
+                                                <td>`+ value.ayat +`</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Surah Nomor</th>
+                                                <td valign="top" width="1%"> : </td>
+                                                <td>`+ value.nomor +`</td>
+                                            </tr>
+                                        </table>
+                                        <audio src="`+ value.audio +`" width="100%" controls></audio>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>`;
+                })
+                $(val).appendTo('#viewData');
+                $('.pre-loader').addClass('hide');
+            }
+        })
+    </script>
 
 
    </body>  
