@@ -151,7 +151,7 @@
           <h4 class="modal-title"></h4>
         </div>
         <div class="modal-body">
-          <section class="daftar-ayat">
+          <section class="list-ayat">
           <div class="container mx-auto"></div></section>
         </div>
         <div class="modal-footer">
@@ -170,7 +170,7 @@
    
   <!-- Ayat -->
     <main id="main"><br> 
-       <section class="list-ayat">
+       <section class="daftar-ayat">
          <div class="container mx-auto"><br>
          <h3 style="color: var(--blue2);">Loading...</h3>
          </div>
@@ -306,7 +306,8 @@ window.onload = function () {
 
 
          $('.daftar-ayat .container').html(fragmentDaftarAyat);
-   
+        $('.list-ayat .container').html(fragmentDaftarAyat);
+	      
          document.querySelector('.autoplay').style.display = 'flex'
 
          // Lihat detail ayat saat tombol expand di click
