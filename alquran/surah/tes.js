@@ -12,7 +12,7 @@ window.onload = function () {
 
          const dataAyat = results.data.verses;
          const namaSurat = results.data.name.transliteration.id
-         let fragmentlistAyat = '';
+         let fragmentDaftarAyat = '';
 
          $('.nama-surat').text(namaSurat);
          $('title').text(`Moco Qur'an - Surah ${namaSurat}`)
@@ -25,7 +25,7 @@ window.onload = function () {
             arti = ayat.translation.id
             tafsir = ayat.tafsir.id.short
 
-            fragmentlistAyat += `
+            fragmentDaftarAyat += `
                <div class="ayat p-3 p-sm-4">
                   <div class="mb-0 py-2 me-3">
                      <h3 class="nomer-ayat text-center" style="font-style: italic;">${nomer}.</h3>
@@ -62,7 +62,7 @@ window.onload = function () {
             `;
          })
 
-         $('.list-ayat .container').html(fragmentlistAyat);
+         $('.list-ayat .container').html(fragmentDaftarAyat);
 
          document.querySelector('.autoplay').style.display = 'flex'
 
@@ -78,7 +78,7 @@ window.onload = function () {
                   this.parentElement.querySelector('.info-ayat').style.height = `calc(${infoHeight} + 2rem)`;
                } else {
                   this.parentElement.querySelector('.info-ayat').style.height = '0';
-f               }
+               }
             })
          });
 
