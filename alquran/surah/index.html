@@ -151,7 +151,7 @@
           <h4 class="modal-title"></h4>
         </div>
         <div class="modal-body">
-          <section class="list-ayat">
+          <section class="daftar-ayat">
           <div class="container mx-auto"></div></section>
         </div>
         <div class="modal-footer">
@@ -239,7 +239,6 @@
     <script src="../../assets/js/main.js "></script>
 
     <script src="index.js "></script>
-    <script src="tes.js "></script>
 
 <script>
 // Mengambil parameter nama dan nomer surat dari url
@@ -272,7 +271,7 @@ window.onload = function () {
             fragmentDaftarAyat += `
                <div class="ayat p-3 p-sm-4">
                   <div class="mb-0 py-2 me-3">
-                     <h3 class="nomer-ayat text-center" style="font-style: italic;">${nomer}.</h3>
+                     <h3 class="nomer-ayat text-center" style="font-style: italic;">Haloo mblo  ${nomer}.</h3>
                      <span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;"></span>
                   </div>
                   <div class="detail-ayat mb-2 w-100">
@@ -306,7 +305,7 @@ window.onload = function () {
             `;
          })
 
-         $('.list-ayat .container').html(fragmentDaftarAyat);
+         $('.daftar-ayat .container').html(fragmentDaftarAyat);
    
          document.querySelector('.autoplay').style.display = 'flex'
 
