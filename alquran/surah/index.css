@@ -167,7 +167,7 @@ audio:focus {
    width: 100%;
 }
 
-.list-surat .surat {
+.list-ayat .ayat {
    background-color: #ffffff;
    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .15);
    border-radius: 6px;
@@ -183,27 +183,27 @@ audio:focus {
    border: .2rem solid var(--blue1);
 }
 
-.list-surat .nomer-surat {
+.list-ayat .nomer-ayat {
    font-size: 1.5rem;
 }
 
-.list-surat .nama-surat {
+.list-ayat .nama-ayat {
    display: grid;
    grid-template-columns: 60% 1fr;
    align-items: center;
    cursor: pointer;
 }
 
-.list-surat .nama-surat .nama {
+.list-ayat .nama-ayat .nama {
    font-size: 1.25rem;
 }
 
-.list-surat .info-surat {
+.list-ayat .info-ayat {
    height: 0;
    transition: .3s;
 }
 
-.list-surat .surat {
+.list-ayat .ayat {
    width: 100%;
    cursor: pointer;
    position: absolute;
@@ -214,18 +214,18 @@ audio:focus {
    text-align: center;
 }
 
-.list-surat .surat .expand-detail img {
+.list-ayat .ayat .expand-detail img {
    width: 1.4rem;
    margin: .7rem 0;
    transform: rotateX(180deg);
    transition: .3s;
 }
 
-.list-surat .surat .expand-detail.open img {
+.list-ayat .ayat .expand-detail.open img {
    transform: rotateX(0);
 }
 
-.list-surat .surat .bookmark {
+.list-ayat .ayat .bookmark {
    cursor: pointer;
    text-align: center;
    font-size: 1.4rem;
