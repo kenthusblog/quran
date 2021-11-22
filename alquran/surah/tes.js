@@ -62,7 +62,7 @@ window.onload = function () {
             `;
          })
 
-         $('.daftar-ayat .container').html(fragmentDaftarAyat);
+         $('.list-ayat .container').html(fragmentDaftarAyat);
 
          document.querySelector('.autoplay').style.display = 'flex'
 
