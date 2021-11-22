@@ -261,12 +261,13 @@ window.onload = function () {
             teksLatin = ayat.text.transliteration.en
             arti = ayat.translation.id
             tafsir = ayat.tafsir.id.short
-
+             no = surat.numberOfVerses
+		 
             fragmentDaftarAyat += `
                <div class="ayat p-3 p-sm-4">
                   <div class="mb-0 py-2 me-3">
 		  
-		  <h6 style="font-weight: 400;">Memiliki <span style="font-weight: 600;">${surat.numberOfVerses} ayat</span></h6>
+		  <h6 style="font-weight: 400;">Memiliki <span style="font-weight: 600;">${no} ayat</span></h6>
 		  
                      <h3 class="nomer-ayat text-center" style="font-style: italic;">${nomer}.</h3>
                      <span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;"></span>
