@@ -12,7 +12,7 @@ window.onload = function () {
 
          const dataAyat = results.data.verses;
          const namaSurat = results.data.name.transliteration.id
-         const listayat = results.data.numberOfVerses
+         const listayat = results.data.revelation.id
          let fragmentDaftarAyat = '';
 
          $('.nama-surat').text(namaSurat);
@@ -64,7 +64,7 @@ window.onload = function () {
          })
 
          $('.daftar-ayat .container').html(fragmentDaftarAyat);
-         $('list-ayat').text(`Memiliki ${listayat} Ayat`)
+         $('list-ayat').text(`Merupakan golongan surat ${listayat}`)
          
 
          
