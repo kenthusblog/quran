@@ -68,12 +68,11 @@ window.onload = function () {
 
          $('.daftar-ayat .container').html(fragmentDaftarAyat);
          
-         listayat.forEach(ayat => {
-            nomer = ayat.number.inSurah
-            teksArab = ayat.text.arab
-            teksLatin = ayat.text.transliteration.en
-            arti = ayat.translation.id
-            tafsir = ayat.tafsir.id.short
+         listayat.forEach(surat => {
+            nomer = surat.numberOfVerses
+            teksArab = surat.name.short
+            teksLatin = surat.revelation.id
+            tafsir = surat.tafsir.id
 
             fragmentlistAyat += `
                <div class="ayat p-3 p-sm-4">
@@ -91,8 +90,7 @@ window.onload = function () {
                      <div class="info-ayat mb-3 mb-sm-0" style="overflow: hidden;">
                         <div class="info mt-3" style="letter-spacing: 1px;">
                            <div class="arti mb-3">
-                              <h6 class="m-0" style="font-weight: 600;">Arti:</h6>
-                              <h6 class="m-0" style="font-weight: 400;">${arti}</h6>
+                             
                            </div>
                            <div class="tafsir">
                               <h6 class="m-0" style="font-weight: 600;">Tafsir:</h6>
