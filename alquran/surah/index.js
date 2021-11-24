@@ -12,7 +12,7 @@ window.onload = function () {
 
          const dataAyat = results.data.verses;
          const namaSurat = results.data.name.transliteration.id
-         const listtayat = results.data.numberOfVerses
+         const listayat = results.data.numberOfVerses
          const listgolongan = results.data.revelation.id
          const listtafsir = results.data.tafsir.id
          let fragmentDaftarAyat = '';
@@ -66,7 +66,7 @@ window.onload = function () {
          })
 
          $('.daftar-ayat .container').html(fragmentDaftarAyat);
-         $('.list-ayat').text(`Memiliki ${listayat} ayat`)
+         $('list-ayat').text(`Memiliki ${listayat} Ayat`)
           $('.list-golongan').text(listgolongan)
           $('.list-tafsir').text(listtafsir)
 
