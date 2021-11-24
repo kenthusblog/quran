@@ -67,8 +67,7 @@ window.onload = function () {
 
          $('.daftar-ayat .container').html(fragmentDaftarAyat);
          $('list-ayat').text(`Memiliki ${listayat} Ayat`)
-          $('.list-golongan').text(listgolongan)
-          $('.list-tafsir').text(listtafsir)
+         
 
          
          
