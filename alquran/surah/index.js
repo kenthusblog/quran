@@ -15,7 +15,8 @@ window.onload = function () {
          const listayat = results.data.numberOfVerses   
          const listgolongan = results.data.revelation.id
          const listtafsir = results.data.tafsir.id
-         let fragmentDaftarAyat = '';
+         let fragmentDaftarAyat = ''
+         let fragmentlistAyat = '';;
 
          $('.nama-surat').text(namaSurat);
          $('title').text(`Moco Quran - Surah ${namaSurat}`)
@@ -66,6 +67,51 @@ window.onload = function () {
          })
 
          $('.daftar-ayat .container').html(fragmentDaftarAyat);
+         
+         listayat.forEach(ayat => {
+            const audio = ayat.audio.primary
+            nomer = ayat.number.inSurah
+            teksArab = ayat.text.arab
+            teksLatin = ayat.text.transliteration.en
+            arti = ayat.translation.id
+            tafsir = ayat.tafsir.id.short
+
+            fragmentlistAyat += `
+               <div class="ayat p-3 p-sm-4">
+                  <div class="mb-0 py-2 me-3">
+                     <h3 class="nomer-ayat text-center" style="font-style: italic;">${nomer}.</h3>
+                     <span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;"></span>
+                  </div>
+                  <div class="detail-ayat mb-2 w-100">
+                     <div class="bacaan-ayat mb-3">
+                        <audio controls>
+                           <source src="${audio}">
+                        </audio>
+                        <h1 class="text-end m-0" style="font-weight: 600; line-height: 1.5;">${teksArab}</h1>
+                     </div>
+                     <div class="bacaan-latin" style="width: 100%; max-width: 700px;">
+                        <h5 style="font-style: italic;">${teksLatin}</h5>
+                     </div>
+                     <div class="info-ayat mb-3 mb-sm-0" style="overflow: hidden;">
+                        <div class="info mt-3" style="letter-spacing: 1px;">
+                           <div class="arti mb-3">
+                              <h6 class="m-0" style="font-weight: 600;">Arti:</h6>
+                              <h6 class="m-0" style="font-weight: 400;">${arti}</h6>
+                           </div>
+                           <div class="tafsir">
+                              <h6 class="m-0" style="font-weight: 600;">Tafsir:</h6>
+                              <h6 class="m-0" style="font-weight: 400;">${tafsir}</h6>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  
+               </div>
+            `;
+         })
+         
+         $('.list-ayat .container').html(fragmentlistAyat);
          $('.list-ayat').text(`Memiliki ${listayat} Ayat`)
           $('list-golongan').text(`Memiliki ${listgolongan}`)
           $('.list-tafsir').text(`Memiliki ${listtafsir}`)
