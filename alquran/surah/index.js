@@ -15,6 +15,7 @@ window.onload = function () {
          let fragmentDaftarAyat = '';
 
          $('.nama-surat').text(namaSurat);
+         $('.list').text(dataAyat);
          $('title').text(`Moco Quran - Surah ${namaSurat}`)
          
          dataAyat.forEach(ayat => {
