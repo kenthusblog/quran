@@ -15,7 +15,6 @@ window.onload = function () {
          const listayat = results.data.surat.revelation.id 
          let fragmentDaftarAyat = '';
 
-         $('.list-ayat').text(listayat)
          $('.nama-surat').text(namaSurat);
          $('title').text(`Moco Quran - Surah ${namaSurat}`)
          
@@ -65,6 +64,7 @@ window.onload = function () {
          })
 
          $('.daftar-ayat .container').html(fragmentDaftarAyat);
+         $('.list-ayat').text(listayat)
 
          
          
