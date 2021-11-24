@@ -12,9 +12,7 @@ window.onload = function () {
 
          const dataAyat = results.data.verses;
          const namaSurat = results.data.name.transliteration.id
-         const listayat = results.data.numberOfVerses   
-         let fragmentDaftarAyat = ''
-         let fragmentlistAyat = '';
+         let fragmentDaftarAyat = '';
 
          $('.nama-surat').text(namaSurat);
          $('title').text(`Moco Quran - Surah ${namaSurat}`)
@@ -66,7 +64,7 @@ window.onload = function () {
 
          $('.daftar-ayat .container').html(fragmentDaftarAyat);
          
-         const daftarSurat = results.data;
+      const daftarSurat = results.data;
       let fragmentDaftarSurat = '';
       daftarSurat.forEach(surat => {
          fragmentDaftarSurat += `
