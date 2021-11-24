@@ -13,10 +13,14 @@ window.onload = function () {
          const dataAyat = results.data.verses;
          const namaSurat = results.data.name.transliteration.id
          const jumlahsurat = results.data.numberOfVerses
+         const golongansurat = results.data.revelation.id
+         const tafsirsurat = results.data.tafsir.id
          let fragmentDaftarAyat = '';
 
          $('.nama-surat').text(namaSurat);
          $('.jumlah-surat').text(jumlahsurat);
+         $('.golongan-surat').text(golongansurat);
+          $('.tafsir-surat').text(tafsirsurat);
          $('title').text(`Moco Quran - Surah ${namaSurat}`)
          
          dataAyat.forEach(ayat => {
