@@ -15,7 +15,7 @@ window.onload = function () {
          const jumlahsurat = results.data.numberOfVerses
          const golongansurat = results.data.revelation.id
          const tafsirsurat = results.data.tafsir.id
-         const nama1surat = results.data.translation.id
+         const nama1surat = results.data.name.translation.id
          let fragmentDaftarAyat = '';
 
          $('.nama-surat').text(namaSurat);
