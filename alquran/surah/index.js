@@ -12,7 +12,7 @@ window.onload = function () {
 
          const dataAyat = results.data.verses;
          const namaSurat = results.data.name.transliteration.id
-         const listayat = results.data.revelation.id
+         const listayat = results.data.numberOfVerses         
          let fragmentDaftarAyat = '';
 
          $('.nama-surat').text(namaSurat);
