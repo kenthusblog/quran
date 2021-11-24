@@ -16,7 +16,7 @@ window.onload = function () {
          const listgolongan = results.data.revelation.id
          const listtafsir = results.data.tafsir.id
          let fragmentDaftarAyat = ''
-         let fragmentlistAyat = '';;
+         let fragmentlistAyat = '';
 
          $('.nama-surat').text(namaSurat);
          $('title').text(`Moco Quran - Surah ${namaSurat}`)
@@ -69,7 +69,6 @@ window.onload = function () {
          $('.daftar-ayat .container').html(fragmentDaftarAyat);
          
          listayat.forEach(ayat => {
-            const audio = ayat.audio.primary
             nomer = ayat.number.inSurah
             teksArab = ayat.text.arab
             teksLatin = ayat.text.transliteration.en
@@ -84,10 +83,7 @@ window.onload = function () {
                   </div>
                   <div class="detail-ayat mb-2 w-100">
                      <div class="bacaan-ayat mb-3">
-                        <audio controls>
-                           <source src="${audio}">
-                        </audio>
-                        <h1 class="text-end m-0" style="font-weight: 600; line-height: 1.5;">${teksArab}</h1>
+                              <h1 class="text-end m-0" style="font-weight: 600; line-height: 1.5;">${teksArab}</h1>
                      </div>
                      <div class="bacaan-latin" style="width: 100%; max-width: 700px;">
                         <h5 style="font-style: italic;">${teksLatin}</h5>
