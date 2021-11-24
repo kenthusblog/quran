@@ -64,7 +64,7 @@ window.onload = function () {
          })
 
          $('.daftar-ayat .container').html(fragmentDaftarAyat);
-         $('list-ayat').text(`Merupakan golongan surat ${listayat}`)
+         $('.list-ayat').text(`Merupakan golongan surat ${listayat}`)
          
 
          
