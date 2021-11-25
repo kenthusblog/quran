@@ -1,4 +1,4 @@
-const txtElement = ['Akses Kapan Saja', 'Dimana Saja', 'dan Gratis tentunya'];
+const txtElement = ['Akses Kapan Saja dan Dimana Saja'];
 let cont = 0;
 let txtIndex = 0;
 let currentTxt = ' ';
@@ -20,7 +20,7 @@ let words = ' ';
         txtIndex = 0;
     }
     
-    setTimeout(ngetik, 200);
+    setTimeout(ngetik, 300);
     
     
 }) ();
