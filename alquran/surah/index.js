@@ -16,6 +16,7 @@ window.onload = function () {
          const golongansurat = results.data.revelation.id
          const tafsirsurat = results.data.tafsir.id
          const nama1surat = results.data.name.translation.id
+         const arabsurat = results.data.name.name.short
          let fragmentDaftarAyat = '';
 
          $('.nama-surat').text(namaSurat);
@@ -23,6 +24,7 @@ window.onload = function () {
          $('.golongan-surat').text(golongansurat);
          $('.tafsir-surat').text(tafsirsurat);
          $('.nama1-surat').text(nama1surat);
+         $('.arab-surat').text(arabsurat);
          $('title').text(`Moco Quran - Surah ${namaSurat}`)
          
          dataAyat.forEach(ayat => {
