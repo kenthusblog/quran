@@ -16,7 +16,7 @@ window.onload = function () {
          const golongansurat = results.data.revelation.id
          const tafsirsurat = results.data.tafsir.id
          const nama1surat = results.data.name.translation.id
-         const arabsurat = results.data.name.name.short
+         const arabsurat = results.data.name.short
          let fragmentDaftarAyat = '';
 
          $('.nama-surat').text(namaSurat);
