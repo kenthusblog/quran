@@ -96,10 +96,12 @@
 
 	
 	<style>
-	.box-1 {
-  width: 200px;
-  padding: 20px;
-  margin: 0 auto; /* code ini akan membuat div berada di tengah atas */
+	.tengah {
+     margin: auto;
+     position: absolute;
+     top: 0; left: 0; bottom: 0; right: 0;
+     height: 300px;
+     border: 1px solid #999; /*jika ingin melihat posisi div anda lebih jelas */
 }
 	</style>
 	
@@ -125,7 +127,7 @@
 			 </ul>
                     </nav>
                 </div>
-                       <div class="box-1">
+                       <div class="tengah">
                         <p><h4 class="nama-surat" style="font-weight: 40px;"></h4> 
                          <a data-toggle="modal" data-target="#myModal" style="font-weight: 10px;">(Info Surat)</a>
 			       </p></div>
@@ -148,10 +150,10 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title"><center><b class="nama-surat" style="font-weight: 50px;" align="center"></b> 
-		  (<i class="nama1-surat" style="font-weight: 100%;"></i>)</center></h4>
+          <h4 class="modal-title"></h4>
         </div>
-        <div class="modal-body"><div class="container" data-aos="fade-up">
+        <div class="modal-body"><div class="container" data-aos="fade-up"><center><b class="nama-surat" style="font-weight: 50px;" align="center"></b> 
+		  (<i class="nama1-surat" style="font-weight: 100%;"></i>)</center>
 		<li>Memiliki <b class="jumlah-surat" style="font-weight: 100%;"></b> Ayat</li>
 		<li>Merupakan golongan surat <b class="golongan-surat" style="font-weight: 100%;"></b></li>
 		<li><i class="tafsir-surat" style="font-weight: 100%;"></i></li>
