@@ -46,6 +46,13 @@ window.onload = function () {
                         <audio controls>
                            <source src="${audio}">
                         </audio>
+                        
+                        
+                        <a class="btn btn-primary btn-rounded text-white btn_download" data-nomor="${row.nomor}">
+                                <i class="fas fa-download"></i> Download Surah
+                            </a>
+                        
+                        
                         <h1 class="text-end m-0" style="font-weight: 600; line-height: 1.5;">${teksArab}</h1>
                      </div>
                      <div class="bacaan-latin" style="width: 100%; max-width: 700px;">
