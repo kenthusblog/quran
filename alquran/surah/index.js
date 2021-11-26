@@ -48,7 +48,7 @@ window.onload = function () {
                         </audio>
                         
                         
-                        <a class="btn btn-primary btn-rounded text-white btn_download" data-nomor="${row.nomor}">
+                        <a class="btn btn-primary btn-rounded text-white btn_download" data-nomor="${nomer}">
                                 <i class="fas fa-download"></i> Download Surah
                             </a>
                         
