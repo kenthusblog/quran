@@ -51,7 +51,7 @@ window.onload = function () {
                         
                       
                                                 
-                        <a class="btn btn-primary btn-rounded text-white btn_download" data-src="${suara}">
+                        <a class="btn btn-primary btn-rounded text-white btn_download" href="${suara}">
                                 <i class="fas fa-download"></i> Download Surah
                             </a>
                         
