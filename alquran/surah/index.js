@@ -52,7 +52,7 @@ window.onload = function () {
                          <a href="${audio}">UNDUH</a>
                         
                         
-                        <a class="btn btn-primary btn-rounded text-white btn_download" data-nomor="${audio}">
+                        <a href="${audio}" class="btn btn-primary btn-rounded text-white btn_download" data-nomor="${audio}">
                                 <i class="fas fa-download"></i> Download Surah
                             </a>
                         
