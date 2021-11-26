@@ -250,5 +250,137 @@
         <script src="index.js "></script>
 
 
+
+
+
+
+ <script>
+        $(document).ready( function () {
+            
+            $('#table_list').DataTable({
+                scrollX: true,
+                searching: true,
+                paging: true,
+                language: {
+                    searchPlaceholder: "Cari ...",
+                    emptyTable: "Belum Ada Data Dikeranjang Anda",
+                    info: "Menampilkan page _PAGE_ of _PAGES_",
+                    infoEmpty: "Tidak Ada Data",
+                },
+                ajax: {
+                    url: " https://equran.id/api/surat",
+                    type: 'GET',
+                    dataSrc : '',
+                },
+                columns: [
+                    {
+                        name: 'nomor',
+                        data: 'nomor',
+                    },
+                    {
+                        data: 'nama_latin'
+                    },
+                    {
+                        data: 'jumlah_ayat'
+                    },
+                    {
+                        name: 'tempat_turun',
+                        data: 'tempat_turun',
+                        className: 'tempat_turun'
+                    },
+                    {
+                    name: 'nomor',
+                    data: 'nomor',
+                    render: function (data, type, row) {
+                        return `
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a class="btn btn-primary btn-rounded text-white btn_download" data-nomor="${row.nomor}">
+                                <i class="fas fa-download"></i> Download Surah
+                            </a>
+                            &nbsp;
+                            <a class="btn btn-info btn-rounded text-white btn_detail" data-bs-toggle="modal" data-bs-target="#detail" data-nomor="${row.nomor}">
+                                <i class="fas fa-info-circle"></i> Detail
+                            </a>
+                            &nbsp;
+                            <a href="baca-surah.html?no=${row.nomor}" class="btn btn-success btn-rounded text-white" >
+                                <i class="fas fa-book-reader"></i> Baca Surah
+                            </a>
+                            &nbsp;
+                            <a href="tafsir.html?no=${row.nomor}" class="btn btn-secondary btn-rounded text-white" >
+                                <i class="fas fa-book-open"></i> Lihat Tafsir
+                            </a>
+                        </div>
+                        `
+                    },
+                    orderable: false,
+                },
+                ],
+            });
+
+            $(document).on('click', '.btn_detail', function(){
+
+                $('#detail').modal('hide')
+                
+                let get = $(this).data('nomor')
+                $('#loading').attr('hidden', false)
+
+                $.ajax({
+                    url: 'https://equran.id/api/surat/' + get,
+                    type: 'GET',
+                })
+                .done(function(data) {
+
+
+                    $('#detailLabel').html('Detail Surah ' + data.nama_latin)
+                    $('.surat_ke').html(data.nomor)
+                    $('.arti').html(data.arti)
+                    $('.nama').html(data.nama_latin + ' - ' +data.nama)
+                    $('.deskripsi').html(data.deskripsi)
+                    $('.jumlah').html(data.jumlah_ayat)
+
+                    $('#detail').modal('show')
+
+
+                })
+                
+            })
+
+            $(document).on('click', '.btn_download', function(){
+
+                let get = $(this).data('nomor')
+
+                $.ajax({
+                    url: 'https://api.quran.sutanlab.id/surah/${nomerSurat}' + get,
+                    type: 'GET',
+                })
+                .done(function(data) {
+                    
+                    let url = data.audio
+
+                    var filename = url.substring(url.lastIndexOf("/") + 1).split("?")[0];
+                    var xhr = new XMLHttpRequest();
+                    xhr.responseType = 'blob';
+                    xhr.onload = function() {
+                        var a = document.createElement('a');
+                        a.href = window.URL.createObjectURL(xhr.response);
+                        a.download = filename; 
+                        a.style.display = 'none';
+                        document.body.appendChild(a);
+                        a.click();
+                        delete a;
+                    };
+                    xhr.open('GET', url);
+                    xhr.send();
+
+                });
+
+            })
+
+
+        });
+    </script>
+
+
+
    </body>  
 </html>
