@@ -52,7 +52,7 @@ window.onload = function () {
                          <a href="${audio}">UNDUH</a>
                         
                         
-                        <a href="${audio}" class="btn btn-primary btn-rounded text-white btn_download" data-nomor="${audio}">
+                        <a class="btn btn-primary btn-rounded text-white btn_download" data-nomor="${audio}">
                                 <i class="fas fa-download"></i> Download Surah
                             </a>
                         
@@ -265,7 +265,7 @@ $(document).on('click', '.btn_download', function(){
                 let get = $(this).data('nomer')
 
                 $.ajax({
-                    url: 'https://api.quran.sutanlab.id/surah/${nomerSurat}' + get,
+                    url: 'https://api.quran.sutanlab.id/surah/' + get,
                     type: 'GET',
                 })
                 .done(function(data) {
