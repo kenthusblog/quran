@@ -43,11 +43,11 @@ window.onload = function () {
                      <span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;"></span>
                   </div>
                   <div class="detail-ayat mb-2 w-100">
-                     <div class="bacaan-ayat mb-3">
+                     <h1 class="text-end m-0" style="font-weight: 600; line-height: 1.5;">${teksArab}</h1>
+                      <div class="bacaan-ayat mb-3">
                         <audio controls>
                            <source src="${audio}">
                         </audio>
-                      <h1 class="text-end m-0" style="font-weight: 600; line-height: 1.5;">${teksArab}</h1>
                      </div>
                      <div class="bacaan-latin" style="width: 100%; max-width: 700px;">
                         <h5 style="font-style: italic;">${teksLatin}</h5>
