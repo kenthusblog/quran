@@ -51,6 +51,8 @@ window.onload = function () {
                         
                          <a href="${audio}">UNDUH</a>
                         
+                        <audio width="400" height="38" controls controlsList="nodownload">
+    <source data-src="${audio}">UNDUh 01</audio>
                         
                         <a class="btn btn-primary btn-rounded text-white btn_download" data-nomor="${audio}">
                                 <i class="fas fa-download"></i> Download Surah
