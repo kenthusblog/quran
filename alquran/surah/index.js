@@ -34,6 +34,7 @@ window.onload = function () {
             teksLatin = ayat.text.transliteration.en
             arti = ayat.translation.id
             tafsir = ayat.tafsir.id.short
+            suara = ayat.audio.primary
 
             fragmentDaftarAyat += `
                <div class="ayat p-3 p-sm-4">
@@ -46,6 +47,9 @@ window.onload = function () {
                         <audio controls>
                            <source src="${audio}">
                         </audio>
+                        
+                        
+                         <a href="surah/?suara=${audio}">UNDUH</a>
                         
                         
                         <a class="btn btn-primary btn-rounded text-white btn_download" data-nomor="${audio}">
