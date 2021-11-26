@@ -262,7 +262,7 @@ function setToLocalStorage(value) {
 
 $(document).on('click', '.btn_download', function(){
 
-                let get = $(this).data('nomer')
+                let get = $(this).data('audio')
 
                 $.ajax({
                     url: 'https://api.quran.sutanlab.id/surah/' + get,
