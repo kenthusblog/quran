@@ -255,8 +255,8 @@
 
 
  <script>
-     
-            $(document).on('click', '.btn_detail', function(){
+               
+           $(document).on('click', '.btn_detail', function(){
 
                 $('#detail').modal('hide')
                 
@@ -286,10 +286,10 @@
 
             $(document).on('click', '.btn_download', function(){
 
-                let get = $(this).data('nomer')
+                let get = $(this).data('nomor')
 
                 $.ajax({
-                    url: 'https://api.quran.sutanlab.id/surah/${nomerSurat}' + get,
+                    url: 'https://equran.id/api/surat/' + get,
                     type: 'GET',
                 })
                 .done(function(data) {
