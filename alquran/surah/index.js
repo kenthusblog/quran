@@ -49,7 +49,7 @@ window.onload = function () {
                         </audio>
                         
                         
-                         <a href="/?suara=${audio}">UNDUH</a>
+                         <a href="${audio}">UNDUH</a>
                         
                         
                         <a class="btn btn-primary btn-rounded text-white btn_download" data-nomor="${audio}">
