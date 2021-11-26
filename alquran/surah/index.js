@@ -51,7 +51,7 @@ window.onload = function () {
                         
                       
                                                 
-                        <a class="btn btn-primary btn-rounded text-white btn_download" data-src="${audio}" href="${teksArab}">
+                        <a class="btn btn-primary btn-rounded text-white btn_download" data-src="${suara}">
                                 <i class="fas fa-download"></i> Download Surah
                             </a>
                         
