@@ -27,7 +27,16 @@ input[type='checkbox'] { display: none; } .wrap-collabsible { margin: 1.2rem 0; 
 .collapsible-content { max-height: 0px; overflow: hidden; transition: max-height .25s ease-in-out; } 
 .toggle:checked + .lbl-toggle + .collapsible-content { max-height: 100%; } 
 .toggle:checked+.lbl-toggle { border-bottom-right-radius: 0; border-bottom-left-radius: 0; } 
-.collapsible-content .content-inner {  } 
+.collapsible-content .content-inner { position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0 solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.75rem;
+  outline: 0; } 
 
 </style>
 	
