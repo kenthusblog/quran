@@ -74,8 +74,7 @@ window.onload = function () {
          })
 
          $('.daftar-ayat .container').html(fragmentDaftarAyat);
-        
-         
+
          document.querySelector('.autoplay').style.display = 'flex'
 
          // Lihat detail ayat saat tombol expand di click
@@ -129,7 +128,7 @@ window.onload = function () {
                   this.classList.remove('fas')
                   this.classList.add('far')
 
-                  const islamicBit = JSON.parse(localStorage.getItem('Moco Quran'))
+                  const islamicBit = JSON.parse(localStorage.getItem('ISLAMIC BIT'))
                   delete islamicBit.bacaanTerakhir
 
                   setToLocalStorage(islamicBit)
@@ -204,12 +203,12 @@ function autoPlay(index) {
 }
 
 // Mendapatakn surat dan ayat yang terkahir dibaca
-if (!localStorage.getItem('Moco Quran')) {
+if (!localStorage.getItem('moco Quran')) {
    localStorage.setItem('Moco Quran', JSON.stringify({}))
 }
 
 function setBacaanTerakhir(nomerSurat, nomerAyat) {
-   const islamicBit = JSON.parse(localStorage.getItem('Moco Quran'))
+   const islamicBit = JSON.parse(localStorage.getItem('ISLAMIC BIT'))
    islamicBit.bacaanTerakhir = {
       nomerSurat: nomerSurat,
       nomerAyat: nomerAyat
