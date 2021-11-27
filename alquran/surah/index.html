@@ -16,36 +16,8 @@
       integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
       crossorigin="anonymous" />
    <link rel="stylesheet" href="index.css">
-
-	
-	<style>
-input[type='checkbox'] { display: none; } .wrap-collabsible { margin: 1.2rem 0; } 
-.lbl-toggle {font-color: #fff;  font-size: 1.2rem; text-align: center; color: #0069ff; background: ; cursor: pointer; border-radius: 7px; transition: all 0.25s ease-out; } 
-.lbl-toggle:hover { color: #0069ff; } 
-.lbl-toggle::before { content: ' '; display: inline-block; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 5px solid currentColor; vertical-align: middle; margin-right: .7rem; transform: translateY(-2px); transition: transform .2s ease-out; } 
-.toggle:checked+.lbl-toggle::before { transform: rotate(90deg) translateX(-3px); } 
-.collapsible-content { max-height: 0px; overflow: hidden; transition: max-height .25s ease-in-out; } 
-.toggle:checked + .lbl-toggle + .collapsible-content { max-height: 100%; } 
-.toggle:checked+.lbl-toggle { border-bottom-right-radius: 0; border-bottom-left-radius: 0; } 
-.collapsible-content .content-inner { position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  pointer-events: auto;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 0 solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.75rem;
-  outline: 0; } 
-
-</style>
-	
-	
-	
 	
    <title>Moco Quran</title>
-
-
 	
 </head>
 
@@ -71,17 +43,16 @@ input[type='checkbox'] { display: none; } .wrap-collabsible { margin: 1.2rem 0; 
              		    
 		    
 
-<input id="collapsible" class="toggle" type="checkbox"><label for="collapsible" class="lbl-toggle">Info Surat</label>
-<div class="collapsible-content"><div class="content-inner">
-<p>
-	<font color="black"><b class="nama-surat" style="font-weight: 50px;" align="center"></b>
-			  	    (<i class="nama1-surat" style="font-weight: 50px;"></i>)<br>
-				    <i class="arab-surat" style="font-weight: 100%;"></i></font></h4><hr>           
-                                    <!-- Info Modal - Text-->
-                                    <p align="justify" class="mb-5">
-                                   Memiliki <b class="jumlah-surat" style="font-weight: 100%;"></b> Ayat<br>
-		Merupakan golongan surat <b class="golongan-surat" style="font-weight: 100%;"></b><br>
-		<i class="tafsir-surat" style="font-weight: 100%;"></i><hr></p></div></div>
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+    <p>A bunch of text</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
 
 
 	
@@ -169,6 +140,15 @@ input[type='checkbox'] { display: none; } .wrap-collabsible { margin: 1.2rem 0; 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 <script src="index.js"></script>
-<script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>	
+<script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+
+</script>
+
 
 </html>
