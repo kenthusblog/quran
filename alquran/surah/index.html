@@ -27,15 +27,19 @@
       <div class="container">
          <div class="navbar-title mx-auto mx-sm-0"
             style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 450px;">
-            <a class="navbar-brand font-weight-bold m-0" href="../../"
+            <a class="navbar-brand font-weight-bold m-0" href="/"
                style="display: grid; grid-template-columns: 1fr 20px; align-items: center; gap: 10px;">
                <span style="letter-spacing: .2rem; font-size: 1.5rem; font-weight: 500;">Moco Quran</span>
-               <img src="../../img/muslim.png" style="width: 20px;">
+               <img src="../../img/muslim.webp" style="width: 20px;">
             </a>
-            <span style="height: 2.8rem; width: .2rem; background-color: var(--white); border-radius: .2rem;"></span>
+           
             <div style="letter-spacing: .1rem;">
                <h4 class="nama-surat m-0" style="font-weight: 600;"></h4>
-            </div>
+                <span style="height: 2.8rem; width: .2rem; background-color: var(--white); border-radius: .2rem;"></span>
+               
+               
+               <a data-toggle="modal" data-target="#detail" class="get-started-btn scrollto" style="font-size: 15px;">
+		         <span class="iconify" data-icon="bx:bxs-info-circle"></span>Detail Surat</a></span>            </div>
          </div>
       </div>
    </nav>
@@ -43,13 +47,62 @@
       <div class="container">
          <a class="navbar-brand font-weight-bold mb-2" href="#"
             style="display: grid; grid-template-columns: 1fr 20px; align-items: center; gap: 10px;">
-            <span style="letter-spacing: 3px; font-size: 1.5rem; font-weight: 500;">Islamic Bit</span>
-            <img src="../../img/muslim.png" style="width: 20px;">
+            <span style="letter-spacing: 3px; font-size: 1.5rem; font-weight: 500;"></span>
+            <img src="../../img/muslim.webp" style="width: 20px;">
          </a>
       </div>
    </nav>
    <!-- End Navbar -->
 
+   
+   
+   
+   <!-- info surat -->
+        <div class="portfolio-modal modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Info Modal - Title-->
+                                    <h4 class="text-secondary mb-0" id="projek1">
+				    <font color="black"><b class="nama-surat" style="font-weight: 50px;" align="center"></b>
+			  	    (<i class="nama1-surat" style="font-weight: 50px;"></i>)<br>
+				    <i class="arab-surat" style="font-weight: 100%;"></i></font></h4><hr>           
+                                    <!-- Info Modal - Text-->
+                                    <p align="justify" class="mb-5">
+                                   Memiliki <b class="jumlah-surat" style="font-weight: 100%;"></b> Ayat<br>
+		Merupakan golongan surat <b class="golongan-surat" style="font-weight: 100%;"></b><br>
+		<i class="tafsir-surat" style="font-weight: 100%;"></i><hr></p>       
+                               <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Kembali
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>	    
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    <!-- Ayat -->
    <section class="daftar-ayat py-4">
       <div class="container mx-auto">
