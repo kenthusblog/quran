@@ -18,13 +18,9 @@
 	
 	
 	
-	<!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      
-   <link rel="stylesheet" href="index.css">
+	
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link rel="stylesheet" href="index.css">
 	
    <title>Moco Quran</title>
 	
@@ -46,25 +42,10 @@
             </a>
            
             <div style="letter-spacing: .1rem;">
-               
                 <span style="height: 2.8rem; width: .2rem; background-color: var(--white); border-radius: .2rem;"></span>
-               
-             		    
-		    
-  <a class="waves-effect waves-light btn modal-trigger" href="modal1">Modal</a>
-<!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
-
-
-	
+                     <a data-toggle="modal" data-target="#detail" class="get-started-btn scrollto" style="font-size: 15px;">
+		     <span class="iconify" data-icon="bx:bxs-info-circle"></span>Detail Surat</a>	
+  
 		    
 		    
 		    </div>
@@ -150,20 +131,6 @@
    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 <script src="index.js"></script>
 <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.modal');
-    var instances = M.Modal.init(elems, options);
-  });
-
-  // Or with jQuery
-
-  $(document).ready(function(){
-    $('.modal').modal();
-  });
-
-</script>
 
 
 </html>
