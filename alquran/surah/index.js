@@ -38,6 +38,21 @@ window.onload = function () {
 
             fragmentDaftarAyat += `
                <div class="ayat p-3 p-sm-4">
+               
+     <div class='post-shareIcon facebook'>
+     <a aria-label='Share button' expr:href='https://kenthus.netlify.app/alquran/surah/?nama=${surat.name.transliteration.id}&nomer=${surat.number}' rel='nofollow noreferrer' role='button' target='_blank' title='Share to Facebook'>
+<svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path d='M24,3H8A5,5,0,0,0,3,8V24a5,5,0,0,0,5,5H24a5,5,0,0,0,5-5V8A5,5,0,0,0,24,3Zm3,21a3,3,0,0,1-3,3H17V18h4a1,1,0,0,0,0-2H17V14a2,2,0,0,1,2-2h2a1,1,0,0,0,0-2H19a4,4,0,0,0-4,4v2H12a1,1,0,0,0,0,2h3v9H8a3,3,0,0,1-3-3V8A3,3,0,0,1,8,5H24a3,3,0,0,1,3,3Z'/></svg>
+                 </a>
+                      </div>
+               
+               
+               
+               
+               
+               
+               
+               
+               
                   <div class="mb-0 py-2 me-3">                 
               <h3 class="nomer-ayat text-center" style="font-style: italic;">${nomer}.</h3>
                      <span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;"></span>
