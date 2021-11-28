@@ -49,7 +49,6 @@ window.onload = function () {
                            <source src="${audio}">
                         </audio>
                      </div>
-                     <div class="sharethis-inline-share-buttons"></div>
                      <div class="bacaan-latin" style="width: 100%; max-width: 700px;">
                         <h5 style="font-style: italic;">${teksLatin}</h5>
                      </div>
