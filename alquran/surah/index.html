@@ -126,12 +126,20 @@
    <!-- End Autoplay Button -->
 
 
+
+
 <div class="container mx-auto">
    <div class="col">
     <div class="p-4" style="border: 1px solid var(--blue1); border-radius: 6px;">
        <center><h2><a href="/alquran/"><span class="iconify" data-icon="bx:bx-chevron-left-circle"></span></a></h2></center>
        </div></div>
       </div>
+
+<ul>
+  <li class="social-share facebook"><img src="facebook-icon.png" alt="Share Page on Facebook" /></li>
+  <li class="social-share twitter"><img src="twitter-icon.png" alt="Share Page on Twitter" /></li>
+  <li class="social-share linkedin"><img src="linkedin-icon.png" alt="Share Page on LinkedIn" /></li>
+</ul>
 
 
     <!-- Share -->
@@ -180,12 +188,40 @@
     <!-- Template Main JS File -->
     <script src="../../assets/js/main.js "></script>
 
+    <script src="index.js"></script>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
 
 
 
+<script>
+	function socialWindow(url) {
+    var left = (screen.width - 570) / 2;
+    var top = (screen.height - 570) / 2;
+    var params = "menubar=no,toolbar=no,status=no,width=570,height=570,top=" + top + ",left=" + left;
+    window.open(url,"NewWindow",params);
+}
 
-<script src="index.js"></script>
-<script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+function setShareLinks() {
+    var pageUrl = encodeURIComponent(document.URL);
+    var tweet = encodeURIComponent(jQuery("meta[property='og:description']").attr("content"));
+    
+    jQuery(".social-share.facebook").on("click", function() {
+        url = "https://www.facebook.com/sharer.php?u=" + pageUrl;
+        socialWindow(url);
+    });
+
+    jQuery(".social-share.twitter").on("click", function() {
+        url = "https://twitter.com/intent/tweet?url=" + pageUrl + "&text=" + tweet;
+        socialWindow(url);
+    });
+
+    jQuery(".social-share.linkedin").on("click", function() {
+        url = "https://www.linkedin.com/shareArticle?mini=true&url=" + pageUrl;
+        socialWindow(url);
+    })
+}
+</script>
+
 
 
 </html>
