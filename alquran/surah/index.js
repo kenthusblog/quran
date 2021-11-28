@@ -48,7 +48,7 @@ window.onload = function () {
                         <audio controls>
                            <source src="${audio}">
                         </audio>
-                     </div>
+                     </div><a href="${suara}">UNDUH</a>
                      <div class="bacaan-latin" style="width: 100%; max-width: 700px;">
                         <h5 style="font-style: italic;">${teksLatin}</h5>
                      </div>
