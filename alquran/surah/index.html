@@ -21,7 +21,6 @@
 <meta content='index, follow' name='GOOGLEBOT'/>
 <meta content='index, follow' name='yahooBOT'/>
 <meta content='index, follow' name='yandexBOT'/>
-<meta content='width=device-width, initial-scale=1' name='viewport'/>
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Moco Quran">
@@ -146,44 +145,6 @@
 
 
 
-<div class="share__wrapper">
-  <p class="share__title">Share this content:</p>
-  <ul class="share__list">
-    <li class="share__item">
-      <button class="share__link  share__link--facebook">
-        <i class="fab fa-facebook-f fa-2x"></i>
-        <span class="sr-only">Share on Facebook</span>
-      </button>
-    </li>
-    <li class="share__item">
-      <button class="share__link share__link--twitter">
-        <i class="fab fa-twitter fa-2x"></i>
-        <span class="sr-only">Share on Twitter</span>
-      </button>
-    </li>
-    <li class="share__item">
-      <button class="share__link share__link--linkedin">
-        <i class="fab fa-linkedin-in fa-2x"></i>
-        <span class="sr-only">Share on LinkedIn</span>
-      </button>
-    </li>
-    <li class="share__item">
-      <button class="share__link share__link--mail">
-        <i class="far fa-envelope fa-2x"></i>
-        <span class="sr-only">Share via Mail</span>
-      </button>
-    </li>
-    <li class="share__item">
-      <button class="share__link share__link--whatsapp">
-        <i class="fab fa-whatsapp fa-2x"></i>
-        <span class="sr-only">Share on WhatsApp</span>
-      </button>
-    </li>
-  </ul>
-</div>
-
-
-
 <!-- Footer -->
   <footer class="py-4" style="background-color: var(--blue1); display: flex; flex-wrap: wrap; justify-content: center; align-items:
       center; color: var(--white);">
@@ -196,60 +157,7 @@
     </div>
   </footer>   
 
-
-
-
-<script>
-	window.onload = setShareLinks;
-
-function setShareLinks() {
-  var pageUrl = encodeURIComponent(document.URL);
-  var pageTitle = encodeURIComponent(document.title);
-
-  document.addEventListener('click', function (event) {  
-    let url = null;
-    
-    if (event.target.classList.contains('share__link--facebook')) {
-      url = "https://www.facebook.com/sharer.php?u=" + pageUrl;
-      socialWindow(url, 570, 570);
-    }
-
-    if (event.target.classList.contains('share__link--twitter')) {
-      url = "https://twitter.com/intent/tweet?url=" + pageUrl + "&text=" + pageTitle;
-      socialWindow(url, 570, 300);
-    }
-
-    if (event.target.classList.contains('share__link--linkedin')) {
-      url = "https://www.linkedin.com/shareArticle?mini=true&url=" + pageUrl;
-      socialWindow(url, 570, 570);
-    }
-
-    if (event.target.classList.contains('share__link--whatsapp')) {
-      url = "whatsapp://send?text=" + pageTitle + "%20" + pageUrl;
-      socialWindow(url, 570, 450);
-    }
-
-    if (event.target.classList.contains('share__link--mail')) {
-      url = "mailto:?subject=%22" + pageTitle + "%22&body=Read%20the%20article%20%22" + pageTitle + "%22%20on%20" + pageUrl;
-      socialWindow(url, 570, 450);
-    }
-
-  }, false);
-}
-
-function socialWindow(url, width, height) {
-  var left = (screen.width - width) / 2;
-  var top = (screen.height - height) / 2;
-  var params = "menubar=no,toolbar=no,status=no,width=" + width + ",height=" + height + ",top=" + top + ",left=" + left;
-  window.open(url,"",params);
-}
-</script>
-
-
-
-
-
-</body>
+   </body>
 
 
 
