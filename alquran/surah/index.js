@@ -44,7 +44,7 @@ window.onload = function () {
                   </div>
                   <div class="detail-ayat mb-2 w-100">
                      <h1 class="text-end m-0" style="font-weight: 600; line-height: 1.5;">${teksArab}</h1>
-                      <div class="bacaan-ayat mb-3">
+                      <div class="bacaan-ayat mb-3" style="font-weight: 600; line-height: 1.5;">
                         <audio controls>
                            <source src="${audio}">
                         </audio>
