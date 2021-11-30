@@ -17,6 +17,7 @@ window.onload = function () {
          const tafsirsurat = results.data.tafsir.id
          const nama1surat = results.data.name.translation.id
          const arabsurat = results.data.name.short
+         const nosurat = results.data.surat.number
          let fragmentDaftarAyat = '';
 
          $('.nama-surat').text(namaSurat);
@@ -25,6 +26,7 @@ window.onload = function () {
          $('.tafsir-surat').text(tafsirsurat);
          $('.nama1-surat').text(nama1surat);
          $('.arab-surat').text(arabsurat);
+         $('.suratke-surat').text(nosurat);
          $('title').text(`Moco Quran - Surah ${namaSurat}`)
          
          dataAyat.forEach(ayat => {
@@ -42,13 +44,7 @@ window.onload = function () {
               <h3 class="nomer-ayat text-center" style="font-style: italic;">${nomer}.</h3>
                      <span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;" onclick="home_text();"></span>
                   </div>
-                  
-                  <a class="btn btn-primary btn-rounded btn_download" data-nomor="${suara}">
-                                <i class="fas fa-download"></i> Download Surah
-                            </a>
-                  
-                  
-                  <div class="detail-ayat mb-2 w-100">
+                 <div class="detail-ayat mb-2 w-100">
                      <h1 class="text-end m-0" style="font-weight: 600; line-height: 1.5;">${teksArab}</h1>
                       <div class="bacaan-ayat mb-3" style="font-weight: 600; line-height: 1.5;">
                         <audio controls>
@@ -249,34 +245,3 @@ function setToLocalStorage(value) {
 //       }
 //    })
 // }
-
-$(document).on('click', '.btn_download', function(){
-
-                let get = $(this).data('nomer')
-
-                $.ajax({
-                    url: 'https://api.quran.sutanlab.id/surah/' + get,
-                    type: 'GET',
-                })
-                .done(function(data) {
-                    
-                    let url = data.audio
-
-                    var filename = url.substring(url.lastIndexOf("/") + 1).split("?")[0];
-                    var xhr = new XMLHttpRequest();
-                    xhr.responseType = 'blob';
-                    xhr.onload = function() {
-                        var a = document.createElement('a');
-                        a.href = window.URL.createObjectURL(xhr.response);
-                        a.download = filename; 
-                        a.style.display = 'none';
-                        document.body.appendChild(a);
-                        a.click();
-                        delete a;
-                    };
-                    xhr.open('GET', url);
-                    xhr.send();
-
-                });
-
-            })
