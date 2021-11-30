@@ -97,8 +97,8 @@ window.onload = function () {
 
          // Last-read labels
          const lastReadLabels = document.querySelectorAll('.ayat .last-read');
-         if (JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir && JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir.nomerSurat == nomerSurat) {
-            const bacaanAyatTerakhir = JSON.parse(localStorage.getItem('Moco Quran')).bacaanTerakhir.nomerAyat;
+         if (JSON.parse(localStorage.getItem('ISLAMIC BIT')).bacaanTerakhir && JSON.parse(localStorage.getItem('ISLAMIC BIT')).bacaanTerakhir.nomerSurat == nomerSurat) {
+            const bacaanAyatTerakhir = JSON.parse(localStorage.getItem('ISLAMIC BIT')).bacaanTerakhir.nomerAyat;
             lastReadLabels[bacaanAyatTerakhir].classList.add('fas')
             lastReadLabels[bacaanAyatTerakhir].classList.remove('far')
 
@@ -128,7 +128,7 @@ window.onload = function () {
                   this.classList.remove('fas')
                   this.classList.add('far')
 
-                  const islamicBit = JSON.parse(localStorage.getItem('Moco Quran'))
+                  const islamicBit = JSON.parse(localStorage.getItem('ISLAMIC BIT'))
                   delete islamicBit.bacaanTerakhir
 
                   setToLocalStorage(islamicBit)
@@ -203,8 +203,8 @@ function autoPlay(index) {
 }
 
 // Mendapatakn surat dan ayat yang terkahir dibaca
-if (!localStorage.getItem('moco Quran')) {
-   localStorage.setItem('Moco Quran', JSON.stringify({}))
+if (!localStorage.getItem('ISLAMIC BIT')) {
+   localStorage.setItem('ISLAMIC BIT', JSON.stringify({}))
 }
 
 function setBacaanTerakhir(nomerSurat, nomerAyat) {
@@ -217,7 +217,7 @@ function setBacaanTerakhir(nomerSurat, nomerAyat) {
 }
 
 function setToLocalStorage(value) {
-   localStorage.setItem('Moco Quran', JSON.stringify(value))
+   localStorage.setItem('ISLAMIC BIT', JSON.stringify(value))
 }
 
 
