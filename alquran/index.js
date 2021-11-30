@@ -43,8 +43,8 @@ $.ajax({
                </div>
 
                <span class="expand-detail">
-                  <img src="../img/arrow-down.png">
-               </span>
+<span class="iconify" data-icon="mdi:arrow-down-drop-circle"></span>
+              </span>
             </div>
          `;
 
