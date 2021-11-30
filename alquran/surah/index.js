@@ -42,6 +42,11 @@ window.onload = function () {
               <h3 class="nomer-ayat text-center" style="font-style: italic;">${nomer}.</h3>
                      <span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;" onclick="home_text();"></span>
                   </div>
+                  <a class="btn btn-primary btn-rounded text-white btn_download" data-nomor="${nomer}">
+                                <i class="fas fa-download"></i> Download Surah
+                            </a>
+                  
+                  
                   <div class="detail-ayat mb-2 w-100">
                      <h1 class="text-end m-0" style="font-weight: 600; line-height: 1.5;">${teksArab}</h1>
                       <div class="bacaan-ayat mb-3" style="font-weight: 600; line-height: 1.5;">
