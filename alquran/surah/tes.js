@@ -3,7 +3,9 @@ function home_text(){
 }
 
 function information_text(){
-	alert('Hallo! Ini adalah menu Informasi.');
+	alert('Sumber Data : \n'+
+			'Sumber data seperti ayat-ayat, terjemahan, tafsir dan murottal disediakan melalui API oleh SutanLab yang mana data-datanya dihimpun dari berbagai sumber seperti Kementerian Agama untuk terjemahan dan tafsir ayat dalam bahasa Indonesia, Quran Cloud untuk ayat-ayat, meta data ayat, dan audio murottal (Syekh. Mishary Rashid Al-Afasy murrotal edition), Al-Quran-ID-API untuk tafsir surat dalam bahasa Indonesia. \n' +
+			');
 }
 
 function portofolio_text(){
