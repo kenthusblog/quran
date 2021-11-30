@@ -43,7 +43,7 @@ window.onload = function () {
                      <span class="last-read far fa-bookmark" style="font-size: 1.8rem; cursor: pointer;" onclick="home_text();"></span>
                   </div>
                   
-                  <a class="btn btn-primary btn-rounded text-white btn_download" data-nomor="${suara}">
+                  <a class="btn btn-primary btn-rounded btn_download" data-nomor="${suara}">
                                 <i class="fas fa-download"></i> Download Surah
                             </a>
                   
@@ -249,3 +249,34 @@ function setToLocalStorage(value) {
 //       }
 //    })
 // }
+
+$(document).on('click', '.btn_download', function(){
+
+                let get = $(this).data('nomer')
+
+                $.ajax({
+                    url: 'https://api.quran.sutanlab.id/surah/' + get,
+                    type: 'GET',
+                })
+                .done(function(data) {
+                    
+                    let url = data.audio
+
+                    var filename = url.substring(url.lastIndexOf("/") + 1).split("?")[0];
+                    var xhr = new XMLHttpRequest();
+                    xhr.responseType = 'blob';
+                    xhr.onload = function() {
+                        var a = document.createElement('a');
+                        a.href = window.URL.createObjectURL(xhr.response);
+                        a.download = filename; 
+                        a.style.display = 'none';
+                        document.body.appendChild(a);
+                        a.click();
+                        delete a;
+                    };
+                    xhr.open('GET', url);
+                    xhr.send();
+
+                });
+
+            })
