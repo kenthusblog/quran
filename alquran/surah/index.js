@@ -243,8 +243,3 @@ function setToLocalStorage(value) {
 //       }
 //    })
 // }
-
-
-function home_text(){
-	alert('berhasil disimpan');
-}
