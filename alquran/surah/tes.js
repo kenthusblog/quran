@@ -1,5 +1,5 @@
 function home_text(){
-	alert('Hallo! Ini adalah menu Beranda.');
+	alert('Berhasil Disimpan');
 }
 
 function information_text(){
@@ -12,8 +12,8 @@ function portofolio_text(){
 
 function biodata_text() {
 	alert(	'Biodata : \n'+
-			'Nama : Apriantoni \n' +
-			'Alamat : Jl. Perintis Kemerdekaan no. 46, Meranto Dusun VIII, Kec. Meranti, Kab, Asahan, Sumater Utara \n' +
+			'Nama :  \n' +
+			'Alamat :  \n' +
 			'Jenis Kelamin : Laki-laki \n'+
 			'Agama : Islam \n' +
 			'dll..');
@@ -21,14 +21,14 @@ function biodata_text() {
 
 function education_text() {
 	alert(	'Pendidikan : \n'+
-			'D-IV Sistem Informasi Politeknik Caltex Riau, 2014-2018 \n' +
-			'SMA Negeri 1 Meranti, 2011-2014 \n' +
-			'dll..');
+			' \n' +
+			' \n' +
+			'');
 }
 
 function experience_text() {
 	alert(	'Pengalaman Kerja : \n'+
-			'- Freelance Software Engineer, 2016-2019 \n' +
-			'- Programmer in Pekanbaru Major Office, 2019 \n' +
-			'- Web Developer Internship in DISKOMINFOTIKSAN Pekanbaru, 2017');
+			'-  \n' +
+			'-  \n' +
+			'- ');
 }
