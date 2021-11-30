@@ -8,7 +8,7 @@ $.ajax({
       let fragmentDaftarSurat = '';
       daftarSurat.forEach(surat => {
          fragmentDaftarSurat += `
-            <div class="surat p-3 p-sm-4">
+            <br><div class="surat p-3 p-sm-4">
                <h3 class="nomer-surat text-center mb-0 py-2 me-3" style="font-style: italic;">${surat.number}.</h3>
                <div class="detail-surat mb-1">
                   <a href="surah/?nama=${surat.name.transliteration.id}&nomer=${surat.number}"
