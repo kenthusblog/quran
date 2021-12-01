@@ -56,7 +56,7 @@ window.onload = function () {
                      
                     <div class="links">
   <ul>
-    <li class="social-share facebook">Share on Facebook</li>
+    <a class="social-share facebook">Share on Facebook</a>
     <li class="social-share twitter">Share on Twitter</li>
     <li class="social-share linkedin">Share on LinkedIn</li>
   </ul>
