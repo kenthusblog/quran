@@ -51,6 +51,29 @@ window.onload = function () {
                            <source src="${audio}">
                         </audio>
                      </div>
+                     
+                     
+                     
+                    <div id="sociallinks">
+  <a href="https://twitter.com/home?status=$url$"
+     target="_blank" rel="noopener noreferrer nofollow"
+     >Tweet this</a> -
+  <a href="http://www.facebook.com/sharer/sharer.php?u=$url$"
+     target="_blank" rel="noopener noreferrer nofollow"
+     >Like this</a> -
+  <a href="https://plus.google.com/share?url=$url$"
+     target="_blank" rel="noopener noreferrer nofollow"
+     >Share on G+</a>
+</div>
+ 
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
                      <div class="bacaan-latin" style="width: 100%; max-width: 700px;">
                         <h5 style="font-style: italic;">${teksLatin}</h5>
                      </div>
