@@ -54,16 +54,12 @@ window.onload = function () {
                      
                      
                      
-                    <div id="sociallinks">
-  <a href="https://twitter.com/home?status="surah/?nama=${surat.name.transliteration.id}&nomer=${surat.number}"
-     target="_blank" rel="noopener noreferrer nofollow"
-     >Tweet this</a> -
-  <a href="http://www.facebook.com/sharer/sharer.php?u=surah/?nama=${surat.name.transliteration.id}&nomer=${surat.number}"
-     target="_blank" rel="noopener noreferrer nofollow"
-     >Like this</a> -
-  <a href="https://plus.google.com/share?url=$url$"
-     target="_blank" rel="noopener noreferrer nofollow"
-     >Share on G+</a>
+                    <div class="links">
+  <ul>
+    <li class="social-share facebook">Share on Facebook</li>
+    <li class="social-share twitter">Share on Twitter</li>
+    <li class="social-share linkedin">Share on LinkedIn</li>
+  </ul>
 </div>
                 
                      
@@ -262,3 +258,36 @@ function setToLocalStorage(value) {
 //       }
 //    })
 // }
+
+
+setShareLinks();
+
+function socialWindow(url) {
+  var left = (screen.width - 570) / 2;
+  var top = (screen.height - 570) / 2;
+  var params = "menubar=no,toolbar=no,status=no,width=570,height=570,top=" + top + ",left=" + left;
+  // Setting 'params' to an empty string will launch
+  // content in a new tab or window rather than a pop-up.
+  // params = "";
+  window.open(url,"NewWindow",params);
+}
+
+function setShareLinks() {
+  var pageUrl = encodeURIComponent(document.URL);
+  var tweet = encodeURIComponent($("meta[property='og:description']").attr("content"));
+
+  $(".social-share.facebook").on("click", function() {
+    url = "https://www.facebook.com/sharer.php?u=" + pageUrl;
+    socialWindow(url);
+  });
+
+  $(".social-share.twitter").on("click", function() {
+    url = "https://twitter.com/intent/tweet?url=" + pageUrl + "&text=" + tweet;
+    socialWindow(url);
+  });
+
+  $(".social-share.linkedin").on("click", function() {
+    url = "https://www.linkedin.com/sharing/share-offsite/?url=" + pageUrl;
+    socialWindow(url);
+  })
+}
