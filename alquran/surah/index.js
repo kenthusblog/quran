@@ -268,3 +268,11 @@ function setToLocalStorage(value) {
 //       }
 //    })
 // }
+
+(function(){window.addEventListener("DOMContentLoaded",function(){
+    var url=document.location;
+    var links=document.getElementById("sociallinks")
+                      .getElementsByTagName('a');
+    for (var i=0;i!=links.length;i++){
+        links[i].setAttribute("href",
+            links[i].href.replace('$url$',url));}})})();
