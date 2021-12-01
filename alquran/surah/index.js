@@ -55,23 +55,17 @@ window.onload = function () {
                      
                      
                     <div id="sociallinks">
-  <a href="https://twitter.com/home?status=$url$"
+  <a href="https://twitter.com/home?status="surah/?nama=${surat.name.transliteration.id}&nomer=${surat.number}"
      target="_blank" rel="noopener noreferrer nofollow"
      >Tweet this</a> -
-  <a href="http://www.facebook.com/sharer/sharer.php?u=$url$"
+  <a href="http://www.facebook.com/sharer/sharer.php?u=surah/?nama=${surat.name.transliteration.id}&nomer=${surat.number}"
      target="_blank" rel="noopener noreferrer nofollow"
      >Like this</a> -
   <a href="https://plus.google.com/share?url=$url$"
      target="_blank" rel="noopener noreferrer nofollow"
      >Share on G+</a>
 </div>
- 
-                     
-                     
-                     
-                     
-                     
-                     
+                
                      
                      
                      <div class="bacaan-latin" style="width: 100%; max-width: 700px;">
@@ -268,11 +262,3 @@ function setToLocalStorage(value) {
 //       }
 //    })
 // }
-
-(function(){window.addEventListener("DOMContentLoaded",function(){
-    var url=document.location;
-    var links=document.getElementById("sociallinks")
-                      .getElementsByTagName('a');
-    for (var i=0;i!=links.length;i++){
-        links[i].setAttribute("href",
-            links[i].href.replace('$url$',url));}})})();
