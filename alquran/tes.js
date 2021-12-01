@@ -11,7 +11,7 @@ $.ajax({
             <br><br><div class="surat p-3 p-sm-4">
                <h3 class="nomer-surat text-center mb-0 py-2 me-3" style="font-style: italic;">${surat.number}.</h3>
                <div class="detail-surat mb-1">
-                  <a href="?nama=${surat.name.transliteration.id}&nomer=${surat.number}"
+                  <a href="?nomer=${surat.number}"
                   style="display: block; color: var(--blue2)" >
                      <div class="nama-surat">
                         <div div style="letter-spacing: .1rem;">
