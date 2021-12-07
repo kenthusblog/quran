@@ -316,7 +316,10 @@ blockquote:before{
 	  
 	  
 	
-<div id="kj" style="height: auto !important;"><script>
+<div id="kj" style="height: auto !important;">
+	
+	
+	<script>
 
 var bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
 
@@ -455,15 +458,38 @@ $('#year').text(g_year);
 <!-- Modal Structure -->
 <div id="myModal" class="modal">
     <div class="modal-content">
-		<span class="close">×</span>
-		<p id="textmodal"></p>
+		<span class="close">&times;</span>
+		<p id='textmodal'></p>
 		<br>
-		<span id="wuku_hide" style="display:none"></span>
+		<span id='wuku_hide' style='display:none'></span>
 		<div id="output_primwuku"></div>
 	</div>
 </div>
 
 <script>
+	
+for ( var w = 2000; w < 2051; w++ ){
+	$("#list-year").append("<option value='"+w+"'>"+w+"</option>");
+}
+	
+$( "#go_year" ).click(function() {
+	
+	if ( $("#list-year option:selected").val() !== "" ){
+	clearAll();
+	document.getElementById('month').innerHTML = bulan[0];
+	document.getElementById('year').innerHTML = parseInt($("#list-year option:selected").val());
+	smonth 			= 0;
+	xmonth			= bulan[0];
+	tahun_terpilih 	= parseInt($("#list-year option:selected").val());
+	generate_table(smonth, tahun_terpilih);
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+	}
+});
+</script>
+	
+	
+	
+	<script>
 
 $("#see_more").click(function(){
 	$(this).parent().find("tr").show();
